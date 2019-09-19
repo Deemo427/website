@@ -1,0 +1,1 @@
+$(document).ready(function(){$window.on('extra:slider:updateClones',function(event,currentItem,currentIndex){var $slider=$(event.target),$clones=$slider.find('.extra-slider-clone');$window.trigger('extra:responsiveImage:init',[$clones])})})
