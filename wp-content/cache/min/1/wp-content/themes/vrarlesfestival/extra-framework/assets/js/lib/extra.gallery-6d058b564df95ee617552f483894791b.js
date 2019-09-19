@@ -1,1 +1,0 @@
-$(document).ready(function(){if(typeof(disableExtraEditorSlider)==='undefined'||disableExtraEditorSlider===!1){$(".content .extra-editor-slider").extraSlider({paginate:!0,navigate:!0})}})
