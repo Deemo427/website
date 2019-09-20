@@ -1,8 +1,5 @@
 ﻿$(document).ready(function () {
-    //login event
-    document.getElementById('login').addEventListener('click', function(){document.querySelector('.login').style.display='block';});
-    document.querySelector('.close').addEventListener('click', function(){document.querySelector('.login').style.display='none';});
-   
+  
     //menubar_hamburger_line_effect
     var $hambtn = $('#menubar_hamburger');
     var $hammenu = $('.btn_menu');
@@ -121,84 +118,6 @@
             , "bottom": -180 + (posY / 20)
         });
     });
-    //swiper slide
-    var swiper = new Swiper('.swiper-container', {
-        effect: 'coverflow'
-        , grabCursor: true
-        , centeredSlides: true
-        , slidesPerView: 'auto'
-        , coverflowEffect: {
-            rotate: 50
-            , stretch: 0
-            , depth: 100
-            , modifier: 1
-            , slideShadows: true
-            , }
-        , pagination: {
-            el: '.swiper-pagination'
-            , }
-        , });
-    //slider interval
-    var $imgs = $('.swiper-slide'),
-        $navi = $('.navi>a'),
-        $prev = $('.btn_prev'),
-        $next = $('.btn_next'),
-        pages = $imgs.length,
-        interval = 3000,
-        fade = 500,
-        i = 0, 
-        timer;
-
-    function startTimer(){
-        timer = setInterval(function(){
-
-            i = (i+1) % pages;
-            next();
-            navigation();
-
-        }, interval);
-    }
-    
-    function stopTimer(){
-        clearInterval(timer);
-    }
-    
-        function next(){
-        
-        var is_visible = $imgs.last().is(':visible');
-        
-        if(is_visible){
-            $('.swiper-slide:visible').fadeOut(fade);
-            i = $imgs.first().fadeIn(fade).index();
-           
-        } else{
-            i = $('.swiper-slide:visible').fadeOut(fade).next('li').fadeIn(fade).index(); 
-        }
-    }
-    
-    function prev(){
-        var is_visible = $imgs.first().is(':visible');
-        
-        if(is_visible){
-            $('.imgs>li:visible').fadeOut(fade);
-            i = $imgs.last().fadeIn(fade).index();
-        } else{
-            i = $('.imgs>li:visible').fadeOut(fade).prev('li').fadeIn(fade).index();
-        }
-    }
-    
-    
-    $next.on('click', function(){
-        next();    
-        navigation();
-    });
-    
-
-    $prev.on('click', function(){
-        prev();
-        navigation();
-       
-    });
 });
 
 $(window).on('scroll', function () {
@@ -229,31 +148,3 @@ $(window).on('scroll', function () {
         $('.scroll-top').removeClass('on');
     }
 });
-
-//Counttime
-window.onload = function () {
-    countDownToTime("Sep 6, 2020 15:00:00", 'countdown1'); // ****** Change this line!
-}
-
-function countDownToTime(countTo, id) {
-    countTo = new Date(countTo).getTime();
-    var now = new Date()
-        , countTo = new Date(countTo)
-        , timeDifference = (countTo - now);
-    var secondsInADay = 60 * 60 * 1000 * 24
-        , secondsInAHour = 60 * 60 * 1000;
-    days = Math.floor(timeDifference / (secondsInADay) * 1);
-    hours = Math.floor((timeDifference % (secondsInADay)) / (secondsInAHour) * 1);
-    mins = Math.floor(((timeDifference % (secondsInADay)) % (secondsInAHour)) / (60 * 1000) * 1);
-    secs = Math.floor((((timeDifference % (secondsInADay)) % (secondsInAHour)) % (60 * 1000)) / 1000 * 1);
-    var idEl = document.getElementById(id);
-    idEl.getElementsByClassName('days')[0].innerHTML = days;
-    idEl.getElementsByClassName('hours')[0].innerHTML = hours;
-    idEl.getElementsByClassName('minutes')[0].innerHTML = mins;
-    idEl.getElementsByClassName('seconds')[0].innerHTML = secs;
-    clearTimeout(countDownToTime.interval);
-    countDownToTime.interval = setTimeout(function () {
-        countDownToTime(countTo, id);
-    }, 1000);
-}
-
