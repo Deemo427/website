@@ -51,8 +51,6 @@ body:before { background-image: url("../img/monhun/bg_pattern.jpg"); background-
 @keyframes fadeIn{	0%	{opacity: 0;}100%{opacity: 1;}}
 /*Event End*/
 
-
-
 #header{width: 1180px; margin:0 auto; position: relative; transition: 0.5s;}
 
 /*menu_hamburger*/
@@ -169,15 +167,6 @@ width: 5.6vw;height: 0.53333vw; }
 		opacity: 0;
 	}
 }
-
-#content{width: 1180px; margin:0px auto;}
-#content::after {content:''; display:block; clear:both;}
-#content>article{float: left; margin-bottom: 50px;}
-#content>article>h2{font:bold 16pt/3 'arial'; }
-
-.content_header{ position: relative; text-transform: uppercase; background-image: url("../img/monhun/title_waku_top.png"), url("../img/monhun/title_waku_bottom.png");
-  background-size: 100%;  background-repeat: no-repeat;  background-position: center top,center bottom;  background-color: rgba(230, 248, 253, 0.5);  width: 100%;  height: 100%;  margin: 0 auto;  padding: 1.33333vw;  color: #0b263d;  text-align: center;}
-
 /*bg_movie*/
 /*
 .bg_movie {position: absolute;width: 100%;height: 100%;z-index: 0;opacity: 0; }
@@ -190,8 +179,24 @@ background-repeat: repeat; transition: opacity 0.2s cubic-bezier(0.25, 0.25, 0.7
 .bg_movie.dark .bg_movie__pattern {opacity: .9; }
 */
 
+/*Login_popup으로 활성화*/
+.login {display: none; position: absolute; top: 10%; left: 50%; transform: translate(-50%, 50%); width: 400px; padding: 40px; background: rgba(0,0,0,.8); box-sizing: border-box; box-shadow: 0 15px 25px rgba(0,0,0,.5); border-radius: 10px;}
+.modal-content{position: relative;}
+.close{position: absolute; top: 0; right: -20px; top: -40px; font-size: 42px; transform: rotate(45deg); color: #fff; cursor: pointer; opacity: 0.7;}
+.login h2 {margin: 0 0 30px; padding: 0; color: #fff; text-align: center;}
+.login .inputBox {position: relative;}
+.login .inputBox input {width: 100%; padding: 10px 0; font-size: 16px; color: #fff; margin-bottom: 30px; border: none; border-bottom: 1px solid #fff; outline: none; background: transparent;}
+.login .inputBox label {position: absolute; top: 0; left: 0; padding: 10px 0; font-size: 16px; color: #fff; pointer-events: none; transition: 0.5s; }
+.login .inputBox input:focus ~ label,
+.login .inputBox input:valid ~ label {top: -20px; left: 0; color: #03a9f4; font-size: 12px;}
+.login input[type="submit"] {background: transparent; border: none; outline: none; color: #fff; background: #03a9f4; padding: 10px 20px; cursor: pointer; border-radius: 5px;}
+
 /*Main*/
-#template-front-page .selection-wrapper {    overflow: hidden;    padding-bottom: 120px;    position: relative;    z-index: 1}
+#wrapper {background-size: 100% 100vh; padding-left: 200px; position: relative}
+
+#wrapper:before {content: ""; display: block; opacity: .1; position: absolute; top: 0; left: 0; z-index: 0; width: 100%; height: 100vh;}
+
+#template-front-page .selection-wrapper {overflow: hidden;    padding-bottom: 120px;    position: relative;    z-index: 1}
 /*slide 구성필요*/
 #template-front-page .selection-wrapper .section-title-wrapper {    left: 60px}
 #template-front-page .selection-wrapper .selection-slider {    margin-right: 100px;    margin-left: 100px;    transform-origin: 0 0;    width: auto}
@@ -294,6 +299,8 @@ background-repeat: repeat; transition: opacity 0.2s cubic-bezier(0.25, 0.25, 0.7
     #template-front-page .jury-wrapper .jury-item:nth-child(3n) {margin-left: auto; margin-right: auto}}
 
 /*Gallery*/
+
+
 #con1{width: 100%;}
 .container{max-width: 1180px; position: relative; display: flex; justify-content: center; flex-wrap: wrap; transition: 0.5s; top: 80px;}
 .container .card{position: relative; width: 295px; height: 300px; display: flex; justify-content: center;  align-items: center; background: #fff; transition: 0.5s; }
@@ -311,24 +318,6 @@ background-repeat: repeat; transition: opacity 0.2s cubic-bezier(0.25, 0.25, 0.7
 .container .card:hover{filter: blur(0px); transform: scale(1)}
 
 /*#con1>div{width: 100%; height: 300px; margin-bottom: 30px;}*/
-/*Login_popup으로 활성화*/
-.login {display: none; position: absolute; top: 10%; left: 50%; transform: translate(-50%, 50%); width: 400px; padding: 40px; background: rgba(0,0,0,.8); box-sizing: border-box; box-shadow: 0 15px 25px rgba(0,0,0,.5); border-radius: 10px;}
-.modal-content{position: relative;}
-
-.close{position: absolute; top: 0; right: -20px; top: -40px; font-size: 42px; transform: rotate(45deg); color: #fff; cursor: pointer; opacity: 0.7;}
-
-.login h2 {margin: 0 0 30px; padding: 0; color: #fff; text-align: center;}
-
-.login .inputBox {position: relative;}
-
-.login .inputBox input {width: 100%; padding: 10px 0; font-size: 16px; color: #fff; margin-bottom: 30px; border: none; border-bottom: 1px solid #fff; outline: none; background: transparent;}
-
-.login .inputBox label {position: absolute; top: 0; left: 0; padding: 10px 0; font-size: 16px; color: #fff; pointer-events: none; transition: 0.5s; }
-
-.login .inputBox input:focus ~ label,
-.login .inputBox input:valid ~ label {top: -20px; left: 0; color: #03a9f4; font-size: 12px;}
-
-.login input[type="submit"] {background: transparent; border: none; outline: none; color: #fff; background: #03a9f4; padding: 10px 20px; cursor: pointer; border-radius: 5px;}
 
 .hunters .card{position: relative; width: 250px; height: 300px; background: #fff; display: flex; justify-content: center; align-items: center; transition: 0.5s;}
 
@@ -464,11 +453,19 @@ section h1{font-size: 2em; text-align:center; font-weight: 900; color:white; pad
 #con6{width: 100%; padding: 80px 0px 80px;}
 #footer{width: 1180px; height: 200px; margin:0 auto;}
 
+#content{width: 1180px; margin:0px auto;}
+#content::after {content:''; display:block; clear:both;}
+#content>article{float: left; margin-bottom: 50px;}
+#content>article>h2{font:bold 16pt/3 'arial'; }
+
 @media screen and (max-width:1199.98px){
     #header{width: 100%; height: 120px}
     .logo{height: 70px;}
     #visual{ height: 480px; transition: 0.5s}/*background-color: deepskyblue;*/
-    #content{width: 100%; padding: 20px;}
+
+    .content_header{ position: relative; text-transform: uppercase; background-image: url("../img/monhun/title_cover_top.png"), url("../img/monhun/title_cover_bottom.png");
+      background-size: 100%;  background-repeat: no-repeat;  background-position: center top,center bottom;  background-color: rgba(230, 248, 253, 0.5);  width: 100%;  height: 100%;  margin: 0 auto;  padding: 1.33333vw;  color: #0b263d;  text-align: center;}
+    #wrapper{width: 100%; padding: 20px;}
     #footer{width: 100%;}
 
 }
@@ -547,17 +544,21 @@ section h1{font-size: 2em; text-align:center; font-weight: 900; color:white; pad
     #con6 > .inner > ul > li:nth-of-type(even){text-align: left; top: 0}
 }
 
-@media (max-width: 575.98px) {
-/*menu_hamburger point 부 수정필요*/
-#menubar_hamburger span {height: 5px;width: 80%;background: #cecccc;border-radius: 9px;opacity: 1;  left: 7px;; transform: rotate(0deg);transition: .25s ease-in-out; }
-#menubar_hamburger span:nth-child(1) {top: -20px;}
-#menubar_hamburger span:nth-child(2),#menubar_hamburger span:nth-child(3) { top: -10px;}
-#menubar_hamburger span:nth-child(4) {top: 0px;}
-/*content3*/
-#con3 .image{flex:100%;}
-/*content4*/
-/*#con4{padding: 60px 50px 30px;}*/
-#con4 > .inner > div{width: 50%; }
+@media only screen and (max-width:690px) {
+    #wrapper {
+        padding-top: 120px;
+        padding-left: 0
+    }
+    /*menu_hamburger point 부 수정필요*/
+    #menubar_hamburger span {height: 5px;width: 80%;background: #cecccc;border-radius: 9px;opacity: 1;  left: 7px;; transform: rotate(0deg);transition: .25s ease-in-out; }
+    #menubar_hamburger span:nth-child(1) {top: -20px;}
+    #menubar_hamburger span:nth-child(2),#menubar_hamburger span:nth-child(3) { top: -10px;}
+    #menubar_hamburger span:nth-child(4) {top: 0px;}
+    /*content3*/
+    #con3 .image{flex:100%;}
+    /*content4*/
+    /*#con4{padding: 60px 50px 30px;}*/
+    #con4 > .inner > div{width: 50%; }
 }
 
 /*footer test*/
