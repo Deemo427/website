@@ -344,12 +344,23 @@ background-repeat: repeat; transition: opacity 0.2s cubic-bezier(0.25, 0.25, 0.7
 .swiper-slide{background-position: center; width: 500px; height: 750px; background: #fff;}
 */
 
+/*diamonds_grid*/
+.diamonds {    text-align: center;    overflow: visible;    white-space: nowrap;    display: inline-block;}
+.diamond-row-wrap {    text-align: center;    position: relative;    float: left;    clear: both;}
+.diamond-row-upper, .diamond-row-lower {    overflow: visible;    clear: both;    width: 100%;}
+.diamond-row-lower {    position: absolute;    bottom: 0;}
+.diamond-row-lower .diamond-box {    margin-left: 64.644660941%; /* 0.5 + 1 / sqrt(2) / 2 */    margin-top: 64.644660941%;}
+.diamond-box-wrap {    float: left;    width: 250px; /* Size of diamonds */    height: 250px;}
+.diamond-box {transform: rotate(45deg); box-sizing: border-box; overflow: hidden; position: relative; z-index: 1; width: 70.710678118%; /* x = sqrt(x^2 / 2) = 1 / sqrt(2) = .70710678118 */
+    height: 70.710678118%;    margin: 14.644660941%;    border: 1px solid transparent;}
+.diamond-box-inner {transform: rotate(-45deg);    transform-origin: center center;    box-sizing: border-box;        width: 141.421356237%; /* sqrt(2) */    height: 141.421356237%;    
+margin: -20.7106781185% 0 0 -20.7106781185%; /* (1 - sqrt(2)) / 2 */}
+
 /*con3_Monster Gallery*/
 #con3>div{width: 100%;}
 #con3 h1{text-align: center; text-transform: uppercase; color: #0b263d;}
 #con3 .diamond-grid{width: 70%; margin: 20px auto 0;}
-#con3 img{position: absolute; top: 50%; left: 0; transform: translateY(-50%) scale(1.1);
-width: 100%; }
+#con3 img{position: absolute; top: 50%; left: 0; transform: translateY(-50%) scale(1.1); width: 100%; }
 #con3 img:hover{ filter:contrast(200%); transform: translateY(-50%) scale(1.2); transition: 0.5s;}
 #con3 .item{width: 220px; height: 220px; background: #fff; opacity: 0.5; transition: 0.5s;}
 #con3 .item:hover{opacity: 1; }
@@ -365,11 +376,9 @@ width: 100%; }
 .show-popup .popup {opacity:1; visibility: visible;}
 .popup > iframe {position:absolute;top:50px;left:90%;}
 
-.thumbnailHunting {position: relative;  width: 850px;  width: 28.33333vw;  height: auto;
-  text-align: left; box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.5);
-  padding: 2px; background-color: #FFF; }
- .thumbnailHunting:hover:before { opacity: 1; }
- .thumbnailHunting:hover .thumbnailHunting__body { border-color: #0e9ee3; }
+.thumbnailHunting {position: relative;  width: 850px;  width: 28.33333vw;  height: auto;  text-align: left; box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.5);  padding: 2px; background-color: #FFF; }
+.thumbnailHunting:hover:before { opacity: 1; }
+.thumbnailHunting:hover .thumbnailHunting__body { border-color: #0e9ee3; }
 /* .thumbnailHunting { position: relative;padding-bottom: 0;background-color: #FFF; opacity: 1;  }*/
 
 .article__list__item{position: relative; padding-bottom: 0; opacity: 0; transform: translateY(-100px); transition: 0.5s}
@@ -437,37 +446,23 @@ width: 100%; }
 #con5{width: 100%;}
 section h1{font-size: 2em; text-align:center; font-weight: 900; color:white; padding-top:45vh; position: relative;}
 
-/*Season Effect*/
-/*
-.ss_sp1 { opacity: 0; position:absolute; transform: translateY(-50%); bottom:-220px; right:20px; animation: fadeIn 1s linear forwards;	animation-delay: 1s;}
-.ss_sp2 { opacity: 0; position:absolute; transform: translateY(-50%); bottom:-280px; right:0px; animation: fadeIn 1s linear forwards; animation-delay: 2s;} 
-.ss_sm1 { opacity: 0; position:absolute; transform: translateY(-50%); bottom:-320px; right:20px; animation: fadeIn 1s linear forwards; width: 50%; height: 50%;	animation-delay: 1s;}
-.ss_sm2 { opacity: 0; position:absolute; transform: translateY(-50%); bottom:-280px; right:0px; animation: fadeIn 1s linear forwards; animation-delay: 2s;} 
-.ss_st1 { opacity: 0; position:absolute; transform: translateY(-50%); bottom:-220px; right:20px; animation: fadeIn 1s linear forwards;	animation-delay: 1s;}
-.ss_st2 { opacity: 0; position:absolute; transform: translateY(-50%); bottom:-280px; right:0px; animation: fadeIn 1s linear forwards; animation-delay: 2s;} 
-.ss_w1 { opacity: 0; position:absolute; transform: translateY(-50%); bottom:-220px; right:20px; animation: fadeIn 1s linear forwards;	animation-delay: 1s;}
-.ss_w2 { opacity: 0; position:absolute; transform: translateY(-50%); bottom:-280px; right:0px; animation: fadeIn 1s linear forwards; animation-delay: 2s;} 
-*/
-
 /*con6*/
 #con6{width: 100%; padding: 80px 0px 80px;}
 #footer{width: 1180px; height: 200px; margin:0 auto;}
 
-/*
-gallery css 수정필요 index 부 css까지 중복적용 에러확인 필요
+/*gallery css 수정필요 index 부 css까지 중복적용 에러확인 필요*/
 #content{width: 1180px; margin:0px auto;}
 #content::after {content:''; display:block; clear:both;}
 #content>article{float: left; margin-bottom: 50px;}
 #content>article>h2{font:bold 16pt/3 'arial'; }
-*/
+.content_header{ position: relative; text-transform: uppercase; background-image: url("../img/monhun/title_cover_top.png"), url("../img/monhun/title_cover_bottom.png"); background-size: 100%; background-repeat: no-repeat;  background-position: center top,center bottom;  background-color: rgba(230, 248, 253, 0.5);  width: 100%;  height: 100%;  margin: 0 auto;  padding: 1.33333vw;  color: #0b263d; text-align: center;}
 
 @media screen and (max-width:1199.98px){
     #header{width: 100%; height: 120px}
     .logo{height: 70px;}
     #visual{ height: 480px; transition: 0.5s}/*background-color: deepskyblue;*/
 
-    .content_header{ position: relative; text-transform: uppercase; background-image: url("../img/monhun/title_cover_top.png"), url("../img/monhun/title_cover_bottom.png");
-      background-size: 100%;  background-repeat: no-repeat;  background-position: center top,center bottom;  background-color: rgba(230, 248, 253, 0.5);  width: 100%;  height: 100%;  margin: 0 auto;  padding: 1.33333vw;  color: #0b263d;  text-align: center;}
+    
     #wrapper{width: 100%; padding: 20px;}
     #footer{width: 100%;}
 
