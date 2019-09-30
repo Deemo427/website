@@ -1,476 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <title>Portfolio Prototype</title>
     <link rel="bluestar icon" href="img/monhun/favicon.ico">
+    <!--외부 lib(git_hub) 사용시 index css를 제일 마지막에 사용-->
+    <!--css-->
+    <link rel="stylesheet" href="css/style.css" />  
     <!--font-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous&display=swap" >
-    <!--css-->
-    <link rel="stylesheet" href="css/diamonds.css" />    
-    <link rel="stylesheet" href="css/style.css" />
-    <!--js-->
     <script data-brackets-id='7' src="https://kit.fontawesome.com/d1eaec8cd2.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="js/jquery.diamonds.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>    
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script> -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script> -->
+    <!-- <script type="text/javascript" src="js/jquery.easing.1.3.js"></script> -->
+    <!-- 외부 lib -->
+    <!-- jury preloader right 부문 -->
+    <script type="text/javascript" src="js/barba.js"></script>
+    <script type="text/javascript" src="js/extraPreloader.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/extraview.js"></script>
+    <script type="text/javascript" src="js/extar.scrollanmator.js"></script>
+    <script type="text/javascript" src="js/Draggable.min.js"></script>
+    <script type="text/javascript" src="js/extrasticky.js"></script>
+    <script type="text/javascript" src="js/vr.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    
+    <!-- <script type='text/javascript' src='../ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script> -->
+    <script type="text/javascript" src="js/TweenMax.min.js"></script>
 </head>
 <body>
-<section id="wrapper">
-     <div id="template-front-page" class="barba-container" data-namespace="front-page">
-        <div class="selection-wrapper">
-            <div class="section-title-wrapper" id="iceb">
-                <h2 class="section-title" > iceborne <span class="separator"></span></h2></div>
-            <div class="selection-slider" >
-                <div class="selection-slider-inner">
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">뷰기능 추가(x2)</h3> <span class="separator"></span>
-                                <div class="director-name">이게 게임이지</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-<!--                                <meta itemprop="url" content="img/monhun/event/img01.jpg">-->
-                                <img src="img/monhun/iceborne/vs_nana.jpg">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="La preuve de l'existence des zombies" data-src-size_2560="wp-content/uploads/2019/06/La-preuve-de-lexistence-des-zombies-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/La-preuve-de-lexistence-des-zombies-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/La-preuve-de-lexistence-des-zombies-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/La-preuve-de-lexistence-des-zombies-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/La-preuve-de-lexistence-des-zombies-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/La-preuve-de-lexistence-des-zombies-360x240.jpg"><img alt="La preuve de l'existence des zombies" src="wp-content/uploads/2019/06/La-preuve-de-lexistence-des-zombies-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">jQuery 적용 중</h3> <span class="separator"></span>
-                                <div class="director-name">코드가 정말 난해</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-<!--                                <meta itemprop="url" content="img/monhun/event/img02.jpg">-->
-                                <img src="img/monhun/iceborne/ib_blade.gif">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="Eve, La danse..." data-src-size_2560="wp-content/uploads/2019/06/Eve-La-danse...-360x240.png" data-src-size_1920="wp-content/uploads/2019/06/Eve-La-danse...-360x240.png" data-src-size_1600="wp-content/uploads/2019/06/Eve-La-danse...-360x240.png" data-src-size_1200="wp-content/uploads/2019/06/Eve-La-danse...-360x240.png" data-src-size_960="wp-content/uploads/2019/06/Eve-La-danse...-360x240.png" data-src-size_500="wp-content/uploads/2019/06/Eve-La-danse...-360x240.png"><img alt="Eve, La danse..." src="wp-content/uploads/2019/06/Eve-La-danse...-360x240.png" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">이미지는 임시</h3> <span class="separator"></span>
-                                <div class="director-name">수정 진행 중</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <img src="img/monhun/iceborne/penguin.jpg">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="Re-Animated" data-src-size_2560="wp-content/uploads/2019/06/Re-Animated-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Re-Animated-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Re-Animated-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Re-Animated-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Re-Animated-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Re-Animated-360x240.jpg"><img alt="Re-Animated" src="wp-content/uploads/2019/06/Re-Animated-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">워커홀릭</h3> <span class="separator"></span>
-                                <div class="director-name">TYPE : 아스테라</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <img src="img/monhun/iceborne/workaholic_bg.png">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="Psychosis by AES+F - FIREWORKS A4@300" data-src-size_2560="wp-content/uploads/2019/06/Psychosis-by-AESF-FIREWORKS-A4300-1-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Psychosis-by-AESF-FIREWORKS-A4300-1-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Psychosis-by-AESF-FIREWORKS-A4300-1-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Psychosis-by-AESF-FIREWORKS-A4300-1-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Psychosis-by-AESF-FIREWORKS-A4300-1-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Psychosis-by-AESF-FIREWORKS-A4300-1-360x240.jpg"><img alt="Psychosis by AES+F - FIREWORKS A4@300" src="wp-content/uploads/2019/06/Psychosis-by-AESF-FIREWORKS-A4300-1-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">감사의 연회</h3> <span class="separator"></span>
-                                <div class="director-name">TYPE : 아스테라</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <img src="img/monhun/event/img05.png">
-                                <meta itemprop="url" content="img/monhun/event/img05.jpg">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="HanaHana" data-src-size_2560="wp-content/uploads/2019/06/HanaHana-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/HanaHana-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/HanaHana-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/HanaHana-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/HanaHana-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/HanaHana-360x240.jpg"><img alt="HanaHana" src="wp-content/uploads/2019/06/HanaHana-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">Fever</h3> <span class="separator"></span>
-                                <div class="director-name">by godjun</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <meta itemprop="url" content="wp-content/uploads/2019/06/Fever-360x240.jpg">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="Fever" data-src-size_2560="wp-content/uploads/2019/06/Fever-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Fever-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Fever-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Fever-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Fever-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Fever-360x240.jpg"><img alt="Fever" src="wp-content/uploads/2019/06/Fever-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">Emergence</h3> <span class="separator"></span>
-                                <div class="director-name">Matt Pyke</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <meta itemprop="url" content="wp-content/uploads/2019/06/Emergence-360x240.jpg">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="Emergence" data-src-size_2560="wp-content/uploads/2019/06/Emergence-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Emergence-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Emergence-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Emergence-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Emergence-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Emergence-360x240.jpg"><img alt="Emergence" src="wp-content/uploads/2019/06/Emergence-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">Afterimage for Tomorrow</h3> <span class="separator"></span>
-                                <div class="director-name">Singing Chen</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <meta itemprop="url" content="wp-content/uploads/2019/06/Afterimage-for-Tomorrow-360x240.jpg">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="Afterimage for Tomorrow" data-src-size_2560="wp-content/uploads/2019/06/Afterimage-for-Tomorrow-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Afterimage-for-Tomorrow-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Afterimage-for-Tomorrow-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Afterimage-for-Tomorrow-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Afterimage-for-Tomorrow-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Afterimage-for-Tomorrow-360x240.jpg"><img alt="Afterimage for Tomorrow" src="wp-content/uploads/2019/06/Afterimage-for-Tomorrow-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">7 alchimies en réalité virtuelle</h3> <span class="separator"></span>
-                                <div class="director-name">Julio Le Parc</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <meta itemprop="url" content="wp-content/uploads/2019/06/7-Alchimies-en-realite-virtuelle2-360x240.png">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="7 Alchimies en realite virtuelle2" data-src-size_2560="wp-content/uploads/2019/06/7-Alchimies-en-realite-virtuelle2-360x240.png" data-src-size_1920="wp-content/uploads/2019/06/7-Alchimies-en-realite-virtuelle2-360x240.png" data-src-size_1600="wp-content/uploads/2019/06/7-Alchimies-en-realite-virtuelle2-360x240.png" data-src-size_1200="wp-content/uploads/2019/06/7-Alchimies-en-realite-virtuelle2-360x240.png" data-src-size_960="wp-content/uploads/2019/06/7-Alchimies-en-realite-virtuelle2-360x240.png" data-src-size_500="wp-content/uploads/2019/06/7-Alchimies-en-realite-virtuelle2-360x240.png"><img alt="7 Alchimies en realite virtuelle2" src="wp-content/uploads/2019/06/7-Alchimies-en-realite-virtuelle2-360x240.png" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">Traveling While Black</h3> <span class="separator"></span>
-                                <div class="director-name">Roger Ross Williams - Ayesha Nadarajah - Felix Lajeunesse - Paul Raphael</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <meta itemprop="url" content="wp-content/uploads/2019/06/Traveling-While-Black2-360x240.jpg">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="Traveling While Black - Still 2" data-src-size_2560="wp-content/uploads/2019/06/Traveling-While-Black2-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Traveling-While-Black2-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Traveling-While-Black2-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Traveling-While-Black2-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Traveling-While-Black2-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Traveling-While-Black2-360x240.jpg"><img alt="Traveling While Black - Still 2" src="wp-content/uploads/2019/06/Traveling-While-Black2-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">L’intelligence de la main</h3> <span class="separator"></span>
-                                <div class="director-name">Alain Fleischer</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <meta itemprop="url" content="wp-content/uploads/2019/06/Lintelligence-de-la-main-Centre-International-dArt-Verrier-de-Meisenthal-laureat-Parcours-2014-Fabrication-dun-vase-Douglas--Guy-Rebmeister-pour-le-C">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="L'intelligence de la main, Centre International d’Art Verrier de Meisenthal, lauréat Parcours 2014, Fabrication d’un vase Douglas © Guy Rebmeister pour le CIAV" data-src-size_2560="wp-content/uploads/2019/06/Lintelligence-de-la-main-Centre-International-dArt-Verrier-de-Meisenthal-laureat-Parcours-2014-Fabrication-dun-vase-Douglas--Guy-Rebmeister-pour-le-C" data-src-size_1920="wp-content/uploads/2019/06/Lintelligence-de-la-main-Centre-International-dArt-Verrier-de-Meisenthal-laureat-Parcours-2014-Fabrication-dun-vase-Douglas--Guy-Rebmeister-pour-le-C" data-src-size_1600="wp-content/uploads/2019/06/Lintelligence-de-la-main-Centre-International-dArt-Verrier-de-Meisenthal-laureat-Parcours-2014-Fabrication-dun-vase-Douglas--Guy-Rebmeister-pour-le-C" data-src-size_1200="wp-content/uploads/2019/06/Lintelligence-de-la-main-Centre-International-dArt-Verrier-de-Meisenthal-laureat-Parcours-2014-Fabrication-dun-vase-Douglas--Guy-Rebmeister-pour-le-C" data-src-size_960="wp-content/uploads/2019/06/Lintelligence-de-la-main-Centre-International-dArt-Verrier-de-Meisenthal-laureat-Parcours-2014-Fabrication-dun-vase-Douglas--Guy-Rebmeister-pour-le-C" data-src-size_500="wp-content/uploads/2019/06/Lintelligence-de-la-main-Centre-International-dArt-Verrier-de-Meisenthal-laureat-Parcours-2014-Fabrication-dun-vase-Douglas--Guy-Rebmeister-pour-le-C"><img alt="L'intelligence de la main, Centre International d’Art Verrier de Meisenthal, lauréat Parcours 2014, Fabrication d’un vase Douglas © Guy Rebmeister pour le CIAV" src="wp-content/uploads/2019/06/Lintelligence-de-la-main-Centre-International-dArt-Verrier-de-Meisenthal-laureat-Parcours-2014-Fabrication-dun-vase-Douglas--Guy-Rebmeister-pour-le-C" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="selection/dreams-of-the-jaguars-daughter/index.html" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">Dreams of the Jaguar’s Daughter</h3> <span class="separator"></span>
-                                <div class="director-name">Alfredo Salazar Caro</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <meta itemprop="url" content="wp-content/uploads/2019/06/Dreams-of-the-Jaguars-Daughter-360x240.jpg">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="Dreams of the Jaguar's Daughter" data-src-size_2560="wp-content/uploads/2019/06/Dreams-of-the-Jaguars-Daughter-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Dreams-of-the-Jaguars-Daughter-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Dreams-of-the-Jaguars-Daughter-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Dreams-of-the-Jaguars-Daughter-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Dreams-of-the-Jaguars-Daughter-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Dreams-of-the-Jaguars-Daughter-360x240.jpg"><img alt="Dreams of the Jaguar's Daughter" src="wp-content/uploads/2019/06/Dreams-of-the-Jaguars-Daughter-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">Awavena</h3> <span class="separator"></span>
-                                <div class="director-name">Lynette Wallworth</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <meta itemprop="url" content="wp-content/uploads/2019/06/Awavena-360x240.jpg">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="Awavena" data-src-size_2560="wp-content/uploads/2019/06/Awavena-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Awavena-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Awavena-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Awavena-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Awavena-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Awavena-360x240.jpg"><img alt="Awavena" src="wp-content/uploads/2019/06/Awavena-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">Accused n°2: Walter Sisulu</h3> <span class="separator"></span>
-                                <div class="director-name">Nicolas Champeaux - Gilles Porte</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <meta itemprop="url" content="wp-content/uploads/2019/06/Accused-Walter-Sisulu-360x240.png">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="Accused Walter Sisulu" data-src-size_2560="wp-content/uploads/2019/06/Accused-Walter-Sisulu-360x240.png" data-src-size_1920="wp-content/uploads/2019/06/Accused-Walter-Sisulu-360x240.png" data-src-size_1600="wp-content/uploads/2019/06/Accused-Walter-Sisulu-360x240.png" data-src-size_1200="wp-content/uploads/2019/06/Accused-Walter-Sisulu-360x240.png" data-src-size_960="wp-content/uploads/2019/06/Accused-Walter-Sisulu-360x240.png" data-src-size_500="wp-content/uploads/2019/06/Accused-Walter-Sisulu-360x240.png"><img alt="Accused Walter Sisulu" src="wp-content/uploads/2019/06/Accused-Walter-Sisulu-360x240.png" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">1,2,3… Bruegel !</h3> <span class="separator"></span>
-                                <div class="director-name">Gordon - Andrés Jarach</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <meta itemprop="url" content="wp-content/uploads/2019/06/Bruegel-LucidRealities-360x240.png">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="Bruegel ©LucidRealities" data-src-size_2560="wp-content/uploads/2019/06/Bruegel-LucidRealities-360x240.png" data-src-size_1920="wp-content/uploads/2019/06/Bruegel-LucidRealities-360x240.png" data-src-size_1600="wp-content/uploads/2019/06/Bruegel-LucidRealities-360x240.png" data-src-size_1200="wp-content/uploads/2019/06/Bruegel-LucidRealities-360x240.png" data-src-size_960="wp-content/uploads/2019/06/Bruegel-LucidRealities-360x240.png" data-src-size_500="wp-content/uploads/2019/06/Bruegel-LucidRealities-360x240.png"><img alt="Bruegel ©LucidRealities" src="wp-content/uploads/2019/06/Bruegel-LucidRealities-360x240.png" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">Luna VR &#038; Luna: Moondust Garden AR</h3> <span class="separator"></span>
-                                <div class="director-name">Robin Hunicke - Martin Middleton</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <meta itemprop="url" content="wp-content/uploads/2019/06/Luna-360x240.jpg">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="Luna" data-src-size_2560="wp-content/uploads/2019/06/Luna-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Luna-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Luna-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Luna-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Luna-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Luna-360x240.jpg"><img alt="Luna" src="wp-content/uploads/2019/06/Luna-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">Gloomy Eyes : First Light (chapitre 1)</h3> <span class="separator"></span>
-                                <div class="director-name">Jorge Tereso - Fernando Maldonado</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <meta itemprop="url" content="wp-content/uploads/2019/06/Gloomy-Eyes-360x240.jpg">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="Gloomy Eyes" data-src-size_2560="wp-content/uploads/2019/06/Gloomy-Eyes-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Gloomy-Eyes-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Gloomy-Eyes-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Gloomy-Eyes-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Gloomy-Eyes-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Gloomy-Eyes-360x240.jpg"><img alt="Gloomy Eyes" src="wp-content/uploads/2019/06/Gloomy-Eyes-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">Bonfire</h3> <span class="separator"></span>
-                                <div class="director-name">Eric Danrnell</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <meta itemprop="url" content="wp-content/uploads/2019/06/Bonfire-270x180.png">
-                                <meta itemprop="width" content="270">
-                                <meta itemprop="height" content="180">
-                                <noscript data-alt="Bonfire" data-src-size_2560="wp-content/uploads/2019/06/Bonfire-270x180.png" data-src-size_1920="wp-content/uploads/2019/06/Bonfire-270x180.png" data-src-size_1600="wp-content/uploads/2019/06/Bonfire-270x180.png" data-src-size_1200="wp-content/uploads/2019/06/Bonfire-270x180.png" data-src-size_960="wp-content/uploads/2019/06/Bonfire-270x180.png" data-src-size_500="wp-content/uploads/2019/06/Bonfire-270x180.png"><img alt="Bonfire" src="wp-content/uploads/2019/06/Bonfire-270x180.png" width="270" height="180"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="270" height="180" style="height: 180px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">Ayahuasca, KosmiK Journey</h3> <span class="separator"></span>
-                                <div class="director-name">Jan Kounen</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                <meta itemprop="url" content="wp-content/uploads/2019/06/Ayahuasca-360x240.jpg">
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="Ayahuasca" data-src-size_2560="wp-content/uploads/2019/06/Ayahuasca-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Ayahuasca-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Ayahuasca-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Ayahuasca-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Ayahuasca-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Ayahuasca-360x240.jpg"><img alt="Ayahuasca" src="wp-content/uploads/2019/06/Ayahuasca-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                    <div class="movie">
-                        <a href="#" class="movie-link">
-                            <div class="movie-metas">
-                                <h3 class="movie-title">7 Lives</h3> <span class="separator"></span>
-                                <div class="director-name">Jan Kounen - Charles Ayats - Sabrina Calvo</div>
-                            </div><span class="background"></span>
-                            <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                               <img src="wp-content/uploads/2019/06/7-Lives-360x240.png">
-<!--                                <meta itemprop="url" content="wp-content/uploads/2019/06/7-Lives-360x240.png">-->
-                                <meta itemprop="width" content="360">
-                                <meta itemprop="height" content="240">
-                                <noscript data-alt="7 Lives" data-src-size_2560="wp-content/uploads/2019/06/7-Lives-360x240.png" data-src-size_1920="wp-content/uploads/2019/06/7-Lives-360x240.png" data-src-size_1600="wp-content/uploads/2019/06/7-Lives-360x240.png" data-src-size_1200="wp-content/uploads/2019/06/7-Lives-360x240.png" data-src-size_960="wp-content/uploads/2019/06/7-Lives-360x240.png" data-src-size_500="wp-content/uploads/2019/06/7-Lives-360x240.png"><img alt="7 Lives" src="wp-content/uploads/2019/06/7-Lives-360x240.png" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
-                        </a>
-                    </div>
-                </div>
-            </div> <span class="dragger"> <span class="handle"></span> </span>
-        </div>
-        <div class="full-size events-jury-wrapper">
-            <div class="events-wrapper" >
-                <div class="section-title-wrapper" id="guide">
-                    <h2 class="section-title" > Guiding land <span class="separator"></span></h2></div>
-                <div class="events-list">
-                    <a href="sub/G-Monster.html" class="event-link">
-                        <time datetime="2019-08-23" class="event-date">Achievements 1</time>
-                        <h3 class="event-title">Guiding Land Monster &#8211; by J.Eyck</h3> <span class="separator"></span> </a>
-                    <a href="sub/G-Item.html" class="event-link">
-                        <time datetime="2019-08-16" class="event-date">Achievements 2</time>
-                        <h3 class="event-title">Guiding Land Itemdrop &#8211; by J.Eyck</h3> <span class="separator"></span> </a>
-                    <a href="#" class="event-link">
-                        <time datetime="2019-08-09" class="event-date">Achievements 3</time>
-                        <h3 class="event-title"> Monster Weak Points&#8211; Under construction</h3> <span class="separator"></span> </a>
-                    <a href="http://summoned.me/" class="event-link">
-                        <time datetime="2019-08-02" class="event-date">Achievements 4</time>
-                        <h3 class="event-title">Equipment Simulator &#8211; Iceborn</h3> <span class="separator"></span> </a>
-                    <a href="#" class="event-link">
-                        <time datetime="2019-07-26" class="event-date">Achievements 5</time>
-                        <h3 class="event-title">Equipment Simulator &#8211; Android_공사중</h3> <span class="separator"></span> </a>
-                    <a href="sub/parts_upgrade.html" class="event-link">
-                        <time datetime="2019-07-19" class="event-date">Achievements 6</time>
-                        <h3 class="event-title">Parts Upgrade &#8211; Atelier Jeune public</h3> <span class="separator"></span> </a>
-                    <a href="#" class="event-link">
-                        <time datetime="2019-07-12" class="event-date">Achievements 7</time>
-                        <h3 class="event-title">준비 중 &#8211; Atelier Jeune public</h3> <span class="separator"></span> </a>
-                    <a href="#" class="event-link">
-                        <time datetime="2019-07-07" class="event-date">Achievements 8</time>
-                        <h3 class="event-title">준비 중 &#8211; Performance : Eve, la danse est un espace sans lieu</h3> <span class="separator"></span> </a>
-                    <a href="#" class="event-link">
-                        <time datetime="2019-07-06" class="event-date">Achievements 9</time>
-                        <h3 class="event-title">준비 중 &#8211; Performance : Eve, la danse est un espace sans lieu</h3> <span class="separator"></span> </a>
-                    <a href="#" class="event-link">
-                        <time datetime="2019-07-05" class="event-date">Achievements 10</time>
-                        <h3 class="event-title">준비 중 &#8211; Les Rencontres du Virtuel</h3> <span class="separator"></span> </a>
-                    <a href="#" class="event-link">
-                        <time datetime="2019-07-04" class="event-date">Achievements 11</time>
-                        <h3 class="event-title">준비 중 &#8211; Remise des prix</h3> <span class="separator"></span> </a>
-                    <a href="#" class="event-link">
-                        <time datetime="2019-07-03" class="event-date">Achievements 12</time>
-                        <h3 class="event-title">준비 중 &#8211; Fête du festival</h3> <span class="separator"></span> </a>
-                    <a href="#" class="event-link">
-                        <time datetime="2019-07-01" class="event-date">Achievements 13</time>
-                        <h3 class="event-title">준비 중 &#8211; Ouverture du Festival</h3> <span class="separator"></span> </a>
-                </div>
-            </div>
-            <div class="jury-wrapper">
-                <div class="section-title-wrapper right" id="winter">
-                    <h2 class="section-title"> Winterer <span class="separator"></span></h2></div>
-                <div class="jury-list" >
-                    <div class="jury-item">
-                        <div class="jury-metas">
-                            <h3 class="jury-title">Worka Holic</h3> <p class="jury-description">I hate work</p><span class="separator"></span></div>
-                        <div class="jury-image-wrapper">
-                            <div class="jury-image-inner">
-                                <figure class="extra-responsive-image-wrapper jury-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                    <meta itemprop="url" content="img/monhun/iceborne/workaholic.png">
-                                    <img src="img/monhun/iceborne/workaholic.png">
-                                    <meta itemprop="width" content="220">
-                                    <meta itemprop="height" content="220">
-                                    <noscript data-alt="Worka Holic" data-src-size_2560="img/monhun/iceborne/workaholic.png" data-src-size_1920="img/monhun/iceborne/workaholic.png" data-src-size_1600="img/monhun/iceborne/workaholic.png" data-src-size_1200="img/monhun/iceborne/workaholic.png" data-src-size_960="img/monhun/iceborne/workaholic.png" data-src-size_500="img/monhun/iceborne/workaholic.png"><img alt="Worka Holic" src="img/monhun/iceborne/workaholic.png" width="220" height="220"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="wp-content/themes/vrarlesfestival/extra-framework/assets/img/blank.png" alt="" width="220" height="220" style="height: 220px;" /></figure><span class="jury-background"></span></div>
-                        </div>
-                    </div>
-                    <div class="jury-item">
-                        <div class="jury-metas">
-                            <h3 class="jury-title">Return True</h3>
-                            <p class="jury-description">Taiwan <br>business trip</p> <span class="separator"></span></div>
-                        <div class="jury-image-wrapper">
-                            <div class="jury-image-inner">
-                                <figure class="extra-responsive-image-wrapper jury-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                    <meta itemprop="url" content="wp-content/uploads/2019/06/MG-20171030-002-220x220.jpg">
-                                    <img src="img/monhun/iceborne/return.png">
-                                    <meta itemprop="width" content="220">
-                                    <meta itemprop="height" content="220">
-                                    <noscript data-alt="MG -20171030-002" data-src-size_2560="wp-content/uploads/2019/06/MG-20171030-002-220x220.jpg" data-src-size_1920="wp-content/uploads/2019/06/MG-20171030-002-220x220.jpg" data-src-size_1600="wp-content/uploads/2019/06/MG-20171030-002-220x220.jpg" data-src-size_1200="wp-content/uploads/2019/06/MG-20171030-002-220x220.jpg" data-src-size_960="wp-content/uploads/2019/06/MG-20171030-002-220x220.jpg" data-src-size_500="wp-content/uploads/2019/06/MG-20171030-002-220x220.jpg"><img alt="MG -20171030-002" src="wp-content/uploads/2019/06/MG-20171030-002-220x220.jpg" width="220" height="220"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="wp-content/themes/vrarlesfestival/extra-framework/assets/img/blank.png" alt="" width="220" height="220" style="height: 220px;" /></figure><span class="jury-background"></span></div>
-                        </div>
-                    </div>
-                    <div class="jury-item">
-                        <div class="jury-metas">
-                            <h3 class="jury-title">Jay</h3>
-                            <p class="jury-description">Sword master</p> <span class="separator"></span></div>
-                        <div class="jury-image-wrapper">
-                            <div class="jury-image-inner">
-                                <figure class="extra-responsive-image-wrapper jury-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                    <meta itemprop="url" content="img/monhun/iceborne/jay.png">
-                                    <img src="img/monhun/iceborne/jay.png">
-                                    <meta itemprop="width" content="220">
-                                    <meta itemprop="height" content="220">
-                                    <noscript data-alt="MG -20190606-003" data-src-size_2560="wp-content/uploads/2019/06/MG-20190606-003-220x220.jpg" data-src-size_1920="wp-content/uploads/2019/06/MG-20190606-003-220x220.jpg" data-src-size_1600="wp-content/uploads/2019/06/MG-20190606-003-220x220.jpg" data-src-size_1200="wp-content/uploads/2019/06/MG-20190606-003-220x220.jpg" data-src-size_960="wp-content/uploads/2019/06/MG-20190606-003-220x220.jpg" data-src-size_500="wp-content/uploads/2019/06/MG-20190606-003-220x220.jpg"><img alt="MG -20190606-003" src="wp-content/uploads/2019/06/MG-20190606-003-220x220.jpg" width="220" height="220"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="wp-content/themes/vrarlesfestival/extra-framework/assets/img/blank.png" alt="" width="220" height="220" style="height: 220px;" /></figure><span class="jury-background"></span></div>
-                        </div>
-                    </div>
-                    <div class="jury-item">
-                        <div class="jury-metas">
-                            <h3 class="jury-title">God Jun</h3>
-                            <p class="jury-description">Photographer
-                                </p> <span class="separator"></span></div>
-                        <div class="jury-image-wrapper">
-                            <div class="jury-image-inner">
-                                <figure class="extra-responsive-image-wrapper jury-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                    <meta itemprop="url" content="wp-content/uploads/2019/06/MG-20190607-004-220x220.jpg">
-                                    <img src="img/monhun/iceborne/godjun.png">
-                                    <meta itemprop="width" content="220">
-                                    <meta itemprop="height" content="220">
-                                    <noscript data-alt="MG -20190607-004" data-src-size_2560="wp-content/uploads/2019/06/MG-20190607-004-220x220.jpg" data-src-size_1920="wp-content/uploads/2019/06/MG-20190607-004-220x220.jpg" data-src-size_1600="wp-content/uploads/2019/06/MG-20190607-004-220x220.jpg" data-src-size_1200="wp-content/uploads/2019/06/MG-20190607-004-220x220.jpg" data-src-size_960="wp-content/uploads/2019/06/MG-20190607-004-220x220.jpg" data-src-size_500="wp-content/uploads/2019/06/MG-20190607-004-220x220.jpg"><img alt="MG -20190607-004" src="wp-content/uploads/2019/06/MG-20190607-004-220x220.jpg" width="220" height="220"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="wp-content/themes/vrarlesfestival/extra-framework/assets/img/blank.png" alt="" width="220" height="220" style="height: 220px;" /></figure><span class="jury-background"></span></div>
-                        </div>
-                    </div>
-                    <div class="jury-item">
-                        <div class="jury-metas">
-                            <h3 class="jury-title">Young</h3>
-                            <p class="jury-description">Monrin</p> <span class="separator"></span></div>
-                        <div class="jury-image-wrapper">
-                            <div class="jury-image-inner">
-                                <figure class="extra-responsive-image-wrapper jury-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                    <meta itemprop="url" content="wp-content/uploads/2019/06/Charlotte_Rampling_2016-2-220x220.jpg">
-                                    <meta itemprop="width" content="220">
-                                    <meta itemprop="height" content="220">
-                                    <noscript data-alt="Charlotte_Rampling_2016 2" data-src-size_2560="wp-content/uploads/2019/06/Charlotte_Rampling_2016-2-220x220.jpg" data-src-size_1920="wp-content/uploads/2019/06/Charlotte_Rampling_2016-2-220x220.jpg" data-src-size_1600="wp-content/uploads/2019/06/Charlotte_Rampling_2016-2-220x220.jpg" data-src-size_1200="wp-content/uploads/2019/06/Charlotte_Rampling_2016-2-220x220.jpg" data-src-size_960="wp-content/uploads/2019/06/Charlotte_Rampling_2016-2-220x220.jpg" data-src-size_500="wp-content/uploads/2019/06/Charlotte_Rampling_2016-2-220x220.jpg"><img alt="Charlotte_Rampling_2016 2" src="wp-content/uploads/2019/06/Charlotte_Rampling_2016-2-220x220.jpg" width="220" height="220"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="wp-content/themes/vrarlesfestival/extra-framework/assets/img/blank.png" alt="" width="220" height="220" style="height: 220px;" /></figure><span class="jury-background"></span></div>
-                        </div>
-                    </div>
-                    <div class="jury-item">
-                        <div class="jury-metas">
-                            <h3 class="jury-title">Gaesin</h3>
-                            <p class="jury-description">Restart now</p> <span class="separator"></span></div>
-                        <div class="jury-image-wrapper">
-                            <div class="jury-image-inner">
-                                <figure class="extra-responsive-image-wrapper jury-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                    <meta itemprop="url" content="wp-content/uploads/2018/06/Renaud-Grand-Clement-220x220.png">
-                                    <meta itemprop="width" content="220">
-                                    <meta itemprop="height" content="220">
-                                    <noscript data-alt="Renaud Grand-Clément" data-src-size_2560="wp-content/uploads/2018/06/Renaud-Grand-Clement-220x220.png" data-src-size_1920="wp-content/uploads/2018/06/Renaud-Grand-Clement-220x220.png" data-src-size_1600="wp-content/uploads/2018/06/Renaud-Grand-Clement-220x220.png" data-src-size_1200="wp-content/uploads/2018/06/Renaud-Grand-Clement-220x220.png" data-src-size_960="wp-content/uploads/2018/06/Renaud-Grand-Clement-220x220.png" data-src-size_500="wp-content/uploads/2018/06/Renaud-Grand-Clement-220x220.png"><img alt="Renaud Grand-Clément" src="wp-content/uploads/2018/06/Renaud-Grand-Clement-220x220.png" width="220" height="220"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="wp-content/themes/vrarlesfestival/extra-framework/assets/img/blank.png" alt="" width="220" height="220" style="height: 220px;" /></figure><span class="jury-background"></span></div>
-                        </div>
-                    </div>
-                    <div class="jury-item">
-                        <div class="jury-metas">
-                            <h3 class="jury-title">Blue Moon</h3>
-                            <p class="jury-description">Game addiction</p> <span class="separator"></span></div>
-                        <div class="jury-image-wrapper">
-                            <div class="jury-image-inner">
-                                <figure class="extra-responsive-image-wrapper jury-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                    <meta itemprop="url" content="wp-content/uploads/2018/06/christopher-miles-f2-220x220.png">
-                                    <meta itemprop="width" content="220">
-                                    <meta itemprop="height" content="220">
-                                    <noscript data-alt="christopher miles f2" data-src-size_2560="wp-content/uploads/2018/06/christopher-miles-f2-220x220.png" data-src-size_1920="wp-content/uploads/2018/06/christopher-miles-f2-220x220.png" data-src-size_1600="wp-content/uploads/2018/06/christopher-miles-f2-220x220.png" data-src-size_1200="wp-content/uploads/2018/06/christopher-miles-f2-220x220.png" data-src-size_960="wp-content/uploads/2018/06/christopher-miles-f2-220x220.png" data-src-size_500="wp-content/uploads/2018/06/christopher-miles-f2-220x220.png"><img alt="christopher miles f2" src="wp-content/uploads/2018/06/christopher-miles-f2-220x220.png" width="220" height="220"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="wp-content/themes/vrarlesfestival/extra-framework/assets/img/blank.png" alt="" width="220" height="220" style="height: 220px;" /></figure><span class="jury-background"></span></div>
-                        </div>
-                    </div>
-                    <div class="jury-item">
-                        <div class="jury-metas">
-                            <h3 class="jury-title">Unknown</h3>
-                            <p class="jury-description">Preparing</p> <span class="separator"></span></div>
-                        <div class="jury-image-wrapper">
-                            <div class="jury-image-inner">
-                                <figure class="extra-responsive-image-wrapper jury-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-                                    <meta itemprop="url" content="wp-content/uploads/2017/04/vincent-perez-Libre-de-droits-2-220x220.png">
-                                    <meta itemprop="width" content="220">
-                                    <meta itemprop="height" content="220">
-                                    <noscript data-alt="vincent-perez-Libre de droits 2" data-src-size_2560="wp-content/uploads/2017/04/vincent-perez-Libre-de-droits-2-220x220.png" data-src-size_1920="wp-content/uploads/2017/04/vincent-perez-Libre-de-droits-2-220x220.png" data-src-size_1600="wp-content/uploads/2017/04/vincent-perez-Libre-de-droits-2-220x220.png" data-src-size_1200="wp-content/uploads/2017/04/vincent-perez-Libre-de-droits-2-220x220.png" data-src-size_960="wp-content/uploads/2017/04/vincent-perez-Libre-de-droits-2-220x220.png" data-src-size_500="wp-content/uploads/2017/04/vincent-perez-Libre-de-droits-2-220x220.png"><img alt="vincent-perez-Libre de droits 2" src="wp-content/uploads/2017/04/vincent-perez-Libre-de-droits-2-220x220.png" width="220" height="220"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="wp-content/themes/vrarlesfestival/extra-framework/assets/img/blank.png" alt="" width="220" height="220" style="height: 220px;" /></figure><span class="jury-background"></span></div>
-                        </div>
-                    </div>
-                </div><span class="background-title"><span class="line"><span class="letter">H</span><span class="letter">u</span></span><span class="line"><span class="letter">n</span><span class="letter">t</span><span class="letter">e</span><span class="letter">r</span></span><span class="line"><span class="letter">2</span><span class="letter">0</span></span><span class="line"><span class="letter">1</span><span class="letter">9</span></span>
-                </span>
-            </div>
-        </div>
-        <div class="news-list-wrapper full-size">
-            <div class="section-title-wrapper" id="news">
-                <h2 class="section-title" > News <span class="separator"></span></h2></div>
-            <div class="news-list" >
-                <section class="news-content">
-                    <a href="news/les-ateliers-jeune-public-ont-commence/index.html" class="news-link">
-                        <time datetime="2019-07-17" class="news-date">case_1. PHP</time>
-                        <h3 class="news-title">게시판 작성</h3> </a>
-                </section>
-                <section class="news-content">
-                    <a href="news/les-laureats-du-vr-arles-festival-2019/index.html" class="news-link">
-                        <time datetime="2019-07-08" class="news-date">case_2. 앱 App 신규제작</time>
-                        <h3 class="news-title">앱 개발 및 연동</h3> </a>
-                </section>
-            </div>
-        </div>
-    </div>
-</section>
-   
+    <div id="wrapper">
+        <main id="barba-wrapper"><div id="template-front-page" class="barba-container" data-namespace="front-page">
+             <div class="selection-wrapper">
+                 <div class="section-title-wrapper" id="iceb">
+                     <h2 class="section-title" > iceborne <span class="separator"></span></h2></div>
+                 <div class="selection-slider" >
+                     <div class="selection-slider-inner">
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">뷰기능 추가(x2)</h3> <span class="separator"></span>
+                                     <div class="director-name">이게 게임이지</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+     <!--                                <meta itemprop="url" content="img/monhun/event/img01.jpg">-->
+                                     <img src="img/monhun/iceborne/vs_nana.jpg">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="La preuve de l'existence des zombies" data-src-size_2560="wp-content/uploads/2019/06/La-preuve-de-lexistence-des-zombies-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/La-preuve-de-lexistence-des-zombies-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/La-preuve-de-lexistence-des-zombies-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/La-preuve-de-lexistence-des-zombies-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/La-preuve-de-lexistence-des-zombies-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/La-preuve-de-lexistence-des-zombies-360x240.jpg"><img alt="La preuve de l'existence des zombies" src="wp-content/uploads/2019/06/La-preuve-de-lexistence-des-zombies-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">jQuery 적용 중</h3> <span class="separator"></span>
+                                     <div class="director-name">코드가 정말 난해</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+     <!--                                <meta itemprop="url" content="img/monhun/event/img02.jpg">-->
+                                     <img src="img/monhun/iceborne/ib_blade.gif">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="Eve, La danse..." data-src-size_2560="wp-content/uploads/2019/06/Eve-La-danse...-360x240.png" data-src-size_1920="wp-content/uploads/2019/06/Eve-La-danse...-360x240.png" data-src-size_1600="wp-content/uploads/2019/06/Eve-La-danse...-360x240.png" data-src-size_1200="wp-content/uploads/2019/06/Eve-La-danse...-360x240.png" data-src-size_960="wp-content/uploads/2019/06/Eve-La-danse...-360x240.png" data-src-size_500="wp-content/uploads/2019/06/Eve-La-danse...-360x240.png"><img alt="Eve, La danse..." src="wp-content/uploads/2019/06/Eve-La-danse...-360x240.png" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">이미지는 임시</h3> <span class="separator"></span>
+                                     <div class="director-name">수정 진행 중</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <img src="img/monhun/iceborne/penguin.jpg">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="Re-Animated" data-src-size_2560="wp-content/uploads/2019/06/Re-Animated-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Re-Animated-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Re-Animated-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Re-Animated-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Re-Animated-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Re-Animated-360x240.jpg"><img alt="Re-Animated" src="wp-content/uploads/2019/06/Re-Animated-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">워커홀릭</h3> <span class="separator"></span>
+                                     <div class="director-name">TYPE : 세리에나</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <img src="img/monhun/iceborne/workaholic_bg.png">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="Psychosis by AES+F - FIREWORKS A4@300" data-src-size_2560="wp-content/uploads/2019/06/Psychosis-by-AESF-FIREWORKS-A4300-1-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Psychosis-by-AESF-FIREWORKS-A4300-1-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Psychosis-by-AESF-FIREWORKS-A4300-1-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Psychosis-by-AESF-FIREWORKS-A4300-1-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Psychosis-by-AESF-FIREWORKS-A4300-1-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Psychosis-by-AESF-FIREWORKS-A4300-1-360x240.jpg"><img alt="Psychosis by AES+F - FIREWORKS A4@300" src="wp-content/uploads/2019/06/Psychosis-by-AESF-FIREWORKS-A4300-1-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">감사의 연회</h3> <span class="separator"></span>
+                                     <div class="director-name">TYPE : 아스테라</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <img src="img/monhun/event/img05.png">
+                                     <meta itemprop="url" content="img/monhun/event/img05.jpg">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="HanaHana" data-src-size_2560="wp-content/uploads/2019/06/HanaHana-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/HanaHana-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/HanaHana-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/HanaHana-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/HanaHana-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/HanaHana-360x240.jpg"><img alt="HanaHana" src="wp-content/uploads/2019/06/HanaHana-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">Fever</h3> <span class="separator"></span>
+                                     <div class="director-name">by godjun</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <meta itemprop="url" content="wp-content/uploads/2019/06/Fever-360x240.jpg">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="Fever" data-src-size_2560="wp-content/uploads/2019/06/Fever-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Fever-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Fever-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Fever-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Fever-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Fever-360x240.jpg"><img alt="Fever" src="wp-content/uploads/2019/06/Fever-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">Emergence</h3> <span class="separator"></span>
+                                     <div class="director-name">Matt Pyke</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <meta itemprop="url" content="wp-content/uploads/2019/06/Emergence-360x240.jpg">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="Emergence" data-src-size_2560="wp-content/uploads/2019/06/Emergence-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Emergence-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Emergence-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Emergence-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Emergence-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Emergence-360x240.jpg"><img alt="Emergence" src="wp-content/uploads/2019/06/Emergence-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">Afterimage for Tomorrow</h3> <span class="separator"></span>
+                                     <div class="director-name">Singing Chen</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <meta itemprop="url" content="wp-content/uploads/2019/06/Afterimage-for-Tomorrow-360x240.jpg">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="Afterimage for Tomorrow" data-src-size_2560="wp-content/uploads/2019/06/Afterimage-for-Tomorrow-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Afterimage-for-Tomorrow-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Afterimage-for-Tomorrow-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Afterimage-for-Tomorrow-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Afterimage-for-Tomorrow-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Afterimage-for-Tomorrow-360x240.jpg"><img alt="Afterimage for Tomorrow" src="wp-content/uploads/2019/06/Afterimage-for-Tomorrow-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">7 alchimies en réalité virtuelle</h3> <span class="separator"></span>
+                                     <div class="director-name">Julio Le Parc</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <meta itemprop="url" content="wp-content/uploads/2019/06/7-Alchimies-en-realite-virtuelle2-360x240.png">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="7 Alchimies en realite virtuelle2" data-src-size_2560="wp-content/uploads/2019/06/7-Alchimies-en-realite-virtuelle2-360x240.png" data-src-size_1920="wp-content/uploads/2019/06/7-Alchimies-en-realite-virtuelle2-360x240.png" data-src-size_1600="wp-content/uploads/2019/06/7-Alchimies-en-realite-virtuelle2-360x240.png" data-src-size_1200="wp-content/uploads/2019/06/7-Alchimies-en-realite-virtuelle2-360x240.png" data-src-size_960="wp-content/uploads/2019/06/7-Alchimies-en-realite-virtuelle2-360x240.png" data-src-size_500="wp-content/uploads/2019/06/7-Alchimies-en-realite-virtuelle2-360x240.png"><img alt="7 Alchimies en realite virtuelle2" src="wp-content/uploads/2019/06/7-Alchimies-en-realite-virtuelle2-360x240.png" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">Traveling While Black</h3> <span class="separator"></span>
+                                     <div class="director-name">Roger Ross Williams - Ayesha Nadarajah - Felix Lajeunesse - Paul Raphael</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <meta itemprop="url" content="wp-content/uploads/2019/06/Traveling-While-Black2-360x240.jpg">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="Traveling While Black - Still 2" data-src-size_2560="wp-content/uploads/2019/06/Traveling-While-Black2-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Traveling-While-Black2-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Traveling-While-Black2-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Traveling-While-Black2-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Traveling-While-Black2-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Traveling-While-Black2-360x240.jpg"><img alt="Traveling While Black - Still 2" src="wp-content/uploads/2019/06/Traveling-While-Black2-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">L’intelligence de la main</h3> <span class="separator"></span>
+                                     <div class="director-name">Alain Fleischer</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <meta itemprop="url" content="wp-content/uploads/2019/06/Lintelligence-de-la-main-Centre-International-dArt-Verrier-de-Meisenthal-laureat-Parcours-2014-Fabrication-dun-vase-Douglas--Guy-Rebmeister-pour-le-C">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="L'intelligence de la main, Centre International d’Art Verrier de Meisenthal, lauréat Parcours 2014, Fabrication d’un vase Douglas © Guy Rebmeister pour le CIAV" data-src-size_2560="wp-content/uploads/2019/06/Lintelligence-de-la-main-Centre-International-dArt-Verrier-de-Meisenthal-laureat-Parcours-2014-Fabrication-dun-vase-Douglas--Guy-Rebmeister-pour-le-C" data-src-size_1920="wp-content/uploads/2019/06/Lintelligence-de-la-main-Centre-International-dArt-Verrier-de-Meisenthal-laureat-Parcours-2014-Fabrication-dun-vase-Douglas--Guy-Rebmeister-pour-le-C" data-src-size_1600="wp-content/uploads/2019/06/Lintelligence-de-la-main-Centre-International-dArt-Verrier-de-Meisenthal-laureat-Parcours-2014-Fabrication-dun-vase-Douglas--Guy-Rebmeister-pour-le-C" data-src-size_1200="wp-content/uploads/2019/06/Lintelligence-de-la-main-Centre-International-dArt-Verrier-de-Meisenthal-laureat-Parcours-2014-Fabrication-dun-vase-Douglas--Guy-Rebmeister-pour-le-C" data-src-size_960="wp-content/uploads/2019/06/Lintelligence-de-la-main-Centre-International-dArt-Verrier-de-Meisenthal-laureat-Parcours-2014-Fabrication-dun-vase-Douglas--Guy-Rebmeister-pour-le-C" data-src-size_500="wp-content/uploads/2019/06/Lintelligence-de-la-main-Centre-International-dArt-Verrier-de-Meisenthal-laureat-Parcours-2014-Fabrication-dun-vase-Douglas--Guy-Rebmeister-pour-le-C"><img alt="L'intelligence de la main, Centre International d’Art Verrier de Meisenthal, lauréat Parcours 2014, Fabrication d’un vase Douglas © Guy Rebmeister pour le CIAV" src="wp-content/uploads/2019/06/Lintelligence-de-la-main-Centre-International-dArt-Verrier-de-Meisenthal-laureat-Parcours-2014-Fabrication-dun-vase-Douglas--Guy-Rebmeister-pour-le-C" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="selection/dreams-of-the-jaguars-daughter/index.html" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">Dreams of the Jaguar’s Daughter</h3> <span class="separator"></span>
+                                     <div class="director-name">Alfredo Salazar Caro</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <meta itemprop="url" content="wp-content/uploads/2019/06/Dreams-of-the-Jaguars-Daughter-360x240.jpg">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="Dreams of the Jaguar's Daughter" data-src-size_2560="wp-content/uploads/2019/06/Dreams-of-the-Jaguars-Daughter-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Dreams-of-the-Jaguars-Daughter-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Dreams-of-the-Jaguars-Daughter-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Dreams-of-the-Jaguars-Daughter-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Dreams-of-the-Jaguars-Daughter-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Dreams-of-the-Jaguars-Daughter-360x240.jpg"><img alt="Dreams of the Jaguar's Daughter" src="wp-content/uploads/2019/06/Dreams-of-the-Jaguars-Daughter-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">Awavena</h3> <span class="separator"></span>
+                                     <div class="director-name">Lynette Wallworth</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <meta itemprop="url" content="wp-content/uploads/2019/06/Awavena-360x240.jpg">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="Awavena" data-src-size_2560="wp-content/uploads/2019/06/Awavena-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Awavena-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Awavena-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Awavena-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Awavena-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Awavena-360x240.jpg"><img alt="Awavena" src="wp-content/uploads/2019/06/Awavena-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">Accused n°2: Walter Sisulu</h3> <span class="separator"></span>
+                                     <div class="director-name">Nicolas Champeaux - Gilles Porte</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <meta itemprop="url" content="wp-content/uploads/2019/06/Accused-Walter-Sisulu-360x240.png">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="Accused Walter Sisulu" data-src-size_2560="wp-content/uploads/2019/06/Accused-Walter-Sisulu-360x240.png" data-src-size_1920="wp-content/uploads/2019/06/Accused-Walter-Sisulu-360x240.png" data-src-size_1600="wp-content/uploads/2019/06/Accused-Walter-Sisulu-360x240.png" data-src-size_1200="wp-content/uploads/2019/06/Accused-Walter-Sisulu-360x240.png" data-src-size_960="wp-content/uploads/2019/06/Accused-Walter-Sisulu-360x240.png" data-src-size_500="wp-content/uploads/2019/06/Accused-Walter-Sisulu-360x240.png"><img alt="Accused Walter Sisulu" src="wp-content/uploads/2019/06/Accused-Walter-Sisulu-360x240.png" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">1,2,3… Bruegel !</h3> <span class="separator"></span>
+                                     <div class="director-name">Gordon - Andrés Jarach</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <meta itemprop="url" content="wp-content/uploads/2019/06/Bruegel-LucidRealities-360x240.png">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="Bruegel ©LucidRealities" data-src-size_2560="wp-content/uploads/2019/06/Bruegel-LucidRealities-360x240.png" data-src-size_1920="wp-content/uploads/2019/06/Bruegel-LucidRealities-360x240.png" data-src-size_1600="wp-content/uploads/2019/06/Bruegel-LucidRealities-360x240.png" data-src-size_1200="wp-content/uploads/2019/06/Bruegel-LucidRealities-360x240.png" data-src-size_960="wp-content/uploads/2019/06/Bruegel-LucidRealities-360x240.png" data-src-size_500="wp-content/uploads/2019/06/Bruegel-LucidRealities-360x240.png"><img alt="Bruegel ©LucidRealities" src="wp-content/uploads/2019/06/Bruegel-LucidRealities-360x240.png" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">Luna VR &#038; Luna: Moondust Garden AR</h3> <span class="separator"></span>
+                                     <div class="director-name">Robin Hunicke - Martin Middleton</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <meta itemprop="url" content="wp-content/uploads/2019/06/Luna-360x240.jpg">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="Luna" data-src-size_2560="wp-content/uploads/2019/06/Luna-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Luna-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Luna-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Luna-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Luna-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Luna-360x240.jpg"><img alt="Luna" src="wp-content/uploads/2019/06/Luna-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">Gloomy Eyes : First Light (chapitre 1)</h3> <span class="separator"></span>
+                                     <div class="director-name">Jorge Tereso - Fernando Maldonado</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <meta itemprop="url" content="wp-content/uploads/2019/06/Gloomy-Eyes-360x240.jpg">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="Gloomy Eyes" data-src-size_2560="wp-content/uploads/2019/06/Gloomy-Eyes-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Gloomy-Eyes-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Gloomy-Eyes-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Gloomy-Eyes-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Gloomy-Eyes-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Gloomy-Eyes-360x240.jpg"><img alt="Gloomy Eyes" src="wp-content/uploads/2019/06/Gloomy-Eyes-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">Bonfire</h3> <span class="separator"></span>
+                                     <div class="director-name">Eric Danrnell</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <meta itemprop="url" content="wp-content/uploads/2019/06/Bonfire-270x180.png">
+                                     <meta itemprop="width" content="270">
+                                     <meta itemprop="height" content="180">
+                                     <noscript data-alt="Bonfire" data-src-size_2560="wp-content/uploads/2019/06/Bonfire-270x180.png" data-src-size_1920="wp-content/uploads/2019/06/Bonfire-270x180.png" data-src-size_1600="wp-content/uploads/2019/06/Bonfire-270x180.png" data-src-size_1200="wp-content/uploads/2019/06/Bonfire-270x180.png" data-src-size_960="wp-content/uploads/2019/06/Bonfire-270x180.png" data-src-size_500="wp-content/uploads/2019/06/Bonfire-270x180.png"><img alt="Bonfire" src="wp-content/uploads/2019/06/Bonfire-270x180.png" width="270" height="180"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="270" height="180" style="height: 180px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">Ayahuasca, KosmiK Journey</h3> <span class="separator"></span>
+                                     <div class="director-name">Jan Kounen</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <meta itemprop="url" content="wp-content/uploads/2019/06/Ayahuasca-360x240.jpg">
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <noscript data-alt="Ayahuasca" data-src-size_2560="wp-content/uploads/2019/06/Ayahuasca-360x240.jpg" data-src-size_1920="wp-content/uploads/2019/06/Ayahuasca-360x240.jpg" data-src-size_1600="wp-content/uploads/2019/06/Ayahuasca-360x240.jpg" data-src-size_1200="wp-content/uploads/2019/06/Ayahuasca-360x240.jpg" data-src-size_960="wp-content/uploads/2019/06/Ayahuasca-360x240.jpg" data-src-size_500="wp-content/uploads/2019/06/Ayahuasca-360x240.jpg"><img alt="Ayahuasca" src="wp-content/uploads/2019/06/Ayahuasca-360x240.jpg" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure>
+                             </a>
+                         </div>
+                         <div class="movie">
+                             <a href="#" class="movie-link">
+                                 <div class="movie-metas">
+                                     <h3 class="movie-title">7 Lives</h3> <span class="separator"></span>
+                                     <div class="director-name">Jan Kounen - Charles Ayats - Sabrina Calvo</div>
+                                 </div><span class="background"></span>
+                                 <figure class="extra-responsive-image-wrapper movie-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                     <!-- <img src="wp-content/uploads/2019/06/7-Lives-360x240.png"> -->
+                                     <!--<meta itemprop="url" content="wp-content/uploads/2019/06/7-Lives-360x240.png">-->
+                                     <meta itemprop="width" content="360">
+                                     <meta itemprop="height" content="240">
+                                     <!-- <noscript data-alt="7 Lives" data-src-size_2560="wp-content/uploads/2019/06/7-Lives-360x240.png" data-src-size_1920="wp-content/uploads/2019/06/7-Lives-360x240.png" data-src-size_1600="wp-content/uploads/2019/06/7-Lives-360x240.png" data-src-size_1200="wp-content/uploads/2019/06/7-Lives-360x240.png" data-src-size_960="wp-content/uploads/2019/06/7-Lives-360x240.png" data-src-size_500="wp-content/uploads/2019/06/7-Lives-360x240.png"><img alt="7 Lives" src="wp-content/uploads/2019/06/7-Lives-360x240.png" width="360" height="240"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="img/monhun/blank.png" alt="" width="360" height="240" style="height: 240px;" /></figure> -->
+                             </a>
+                         </div>
+                     </div>
+                 </div> <span class="dragger"> <span class="handle"></span> </span>
+             </div>
+             <div class="full-size events-jury-wrapper">
+                 <div class="events-wrapper" >
+                     <div class="section-title-wrapper" id="guide">
+                         <h2 class="section-title" > Guiding land <span class="separator"></span></h2></div>
+                     <div class="events-list">
+                         <a href="sub/G-Monster.html" class="event-link">
+                             <time datetime="2019-08-23" class="event-date">Achievements 1</time>
+                             <h3 class="event-title">Guiding Land Monster &#8211; by J.Eyck</h3> <span class="separator"></span> </a>
+                         <a href="sub/G-Item.html" class="event-link">
+                             <time datetime="2019-08-16" class="event-date">Achievements 2</time>
+                             <h3 class="event-title">Guiding Land Itemdrop &#8211; by J.Eyck</h3> <span class="separator"></span> </a>
+                         <a href="#" class="event-link">
+                             <time datetime="2019-08-09" class="event-date">Achievements 3</time>
+                             <h3 class="event-title"> Monster Weak Points &#8211; Under construction</h3> <span class="separator"></span> </a>
+                         <a href="http://summoned.me/" class="event-link">
+                             <time datetime="2019-08-02" class="event-date">Achievements 4</time>
+                             <h3 class="event-title">Equipment Simulator &#8211; Iceborn</h3> <span class="separator"></span> </a>
+                         <a href="#" class="event-link">
+                             <time datetime="2019-07-26" class="event-date">Achievements 5</time>
+                             <h3 class="event-title">Equipment Simulator &#8211; Android_공사중</h3> <span class="separator"></span> </a>
+                         <a href="sub/parts_upgrade.html" class="event-link">
+                             <time datetime="2019-07-19" class="event-date">Achievements 6</time>
+                             <h3 class="event-title">Parts Upgrade &#8211; Atelier Jeune public</h3> <span class="separator"></span> </a>
+                         <a href="#" class="event-link">
+                             <time datetime="2019-07-12" class="event-date">Achievements 7</time>
+                             <h3 class="event-title">준비 중 &#8211; Atelier Jeune public</h3> <span class="separator"></span> </a>
+                         <a href="#" class="event-link">
+                             <time datetime="2019-07-07" class="event-date">Achievements 8</time>
+                             <h3 class="event-title">준비 중 &#8211; Performance : Eve, la danse est un espace sans lieu</h3> <span class="separator"></span> </a>
+                         <a href="#" class="event-link">
+                             <time datetime="2019-07-06" class="event-date">Achievements 9</time>
+                             <h3 class="event-title">준비 중 &#8211; Performance : Eve, la danse est un espace sans lieu</h3> <span class="separator"></span> </a>
+                         <a href="#" class="event-link">
+                             <time datetime="2019-07-05" class="event-date">Achievements 10</time>
+                             <h3 class="event-title">준비 중 &#8211; Les Rencontres du Virtuel</h3> <span class="separator"></span> </a>
+                         <a href="#" class="event-link">
+                             <time datetime="2019-07-04" class="event-date">Achievements 11</time>
+                             <h3 class="event-title">준비 중 &#8211; Remise des prix</h3> <span class="separator"></span> </a>
+                         <a href="#" class="event-link">
+                             <time datetime="2019-07-03" class="event-date">Achievements 12</time>
+                             <h3 class="event-title">준비 중 &#8211; Fête du festival</h3> <span class="separator"></span> </a>
+                         <a href="#" class="event-link">
+                             <time datetime="2019-07-01" class="event-date">Achievements 13</time>
+                             <h3 class="event-title">준비 중 &#8211; Ouverture du Festival</h3> <span class="separator"></span> </a>
+                     </div>
+                 </div>
+                 <div class="jury-wrapper">
+                     <div class="section-title-wrapper right" id="winter">
+                         <h2 class="section-title"> Winterer <span class="separator"></span></h2></div>
+                     <div class="jury-list" >
+                         <div class="jury-item">
+                             <div class="jury-metas">
+                                 <h3 class="jury-title">Worka Holic</h3> <p class="jury-description">I hate work</p><span class="separator"></span></div>
+                             <div class="jury-image-wrapper">
+                                 <div class="jury-image-inner">
+                                     <figure class="extra-responsive-image-wrapper jury-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                         <meta itemprop="url" content="img/monhun/iceborne/workaholic.png">
+                                         <img src="img/monhun/iceborne/workaholic.png">
+                                         <meta itemprop="width" content="220">
+                                         <meta itemprop="height" content="220">
+                                         <noscript data-alt="Worka Holic" data-src-size_2560="img/monhun/iceborne/workaholic.png" data-src-size_1920="img/monhun/iceborne/workaholic.png" data-src-size_1600="img/monhun/iceborne/workaholic.png" data-src-size_1200="img/monhun/iceborne/workaholic.png" data-src-size_960="img/monhun/iceborne/workaholic.png" data-src-size_500="img/monhun/iceborne/workaholic.png"><img alt="Worka Holic" src="img/monhun/iceborne/workaholic.png" width="220" height="220"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="#" alt="" width="220" height="220" style="height: 220px;" /></figure><span class="jury-background"></span></div>
+                             </div>
+                         </div>
+                         <div class="jury-item">
+                             <div class="jury-metas">
+                                 <h3 class="jury-title">Return True</h3>
+                                 <p class="jury-description">Dodogama <br>Slayer</p> <span class="separator"></span></div>
+                             <div class="jury-image-wrapper">
+                                 <div class="jury-image-inner">
+                                     <figure class="extra-responsive-image-wrapper jury-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                         <meta itemprop="url" content="wp-content/uploads/2019/06/MG-20171030-002-220x220.jpg">
+                                         <img src="img/monhun/iceborne/return.png">
+                                         <meta itemprop="width" content="220">
+                                         <meta itemprop="height" content="220">
+                                         <noscript data-alt="MG -20171030-002" data-src-size_2560="wp-content/uploads/2019/06/MG-20171030-002-220x220.jpg" data-src-size_1920="wp-content/uploads/2019/06/MG-20171030-002-220x220.jpg" data-src-size_1600="wp-content/uploads/2019/06/MG-20171030-002-220x220.jpg" data-src-size_1200="wp-content/uploads/2019/06/MG-20171030-002-220x220.jpg" data-src-size_960="wp-content/uploads/2019/06/MG-20171030-002-220x220.jpg" data-src-size_500="wp-content/uploads/2019/06/MG-20171030-002-220x220.jpg"><img alt="MG -20171030-002" src="wp-content/uploads/2019/06/MG-20171030-002-220x220.jpg" width="220" height="220"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="#" alt="" width="220" height="220" style="height: 220px;" /></figure><span class="jury-background"></span></div>
+                             </div>
+                         </div>
+                         <div class="jury-item">
+                             <div class="jury-metas">
+                                 <h3 class="jury-title">Jay</h3>
+                                 <p class="jury-description">Sword master</p> <span class="separator"></span></div>
+                             <div class="jury-image-wrapper">
+                                 <div class="jury-image-inner">
+                                     <figure class="extra-responsive-image-wrapper jury-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                         <meta itemprop="url" content="img/monhun/iceborne/jay.png">
+                                         <img src="img/monhun/iceborne/jay.png">
+                                         <meta itemprop="width" content="220">
+                                         <meta itemprop="height" content="220">
+                                         <noscript data-alt="MG -20190606-003" data-src-size_2560="wp-content/uploads/2019/06/MG-20190606-003-220x220.jpg" data-src-size_1920="wp-content/uploads/2019/06/MG-20190606-003-220x220.jpg" data-src-size_1600="wp-content/uploads/2019/06/MG-20190606-003-220x220.jpg" data-src-size_1200="wp-content/uploads/2019/06/MG-20190606-003-220x220.jpg" data-src-size_960="wp-content/uploads/2019/06/MG-20190606-003-220x220.jpg" data-src-size_500="wp-content/uploads/2019/06/MG-20190606-003-220x220.jpg"><img alt="MG -20190606-003" src="wp-content/uploads/2019/06/MG-20190606-003-220x220.jpg" width="220" height="220"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="#" alt="" width="220" height="220" style="height: 220px;" /></figure><span class="jury-background"></span></div>
+                             </div>
+                         </div>
+                         <div class="jury-item">
+                             <div class="jury-metas">
+                                 <h3 class="jury-title">God Jun</h3>
+                                 <p class="jury-description">Photographer
+                                     </p> <span class="separator"></span></div>
+                             <div class="jury-image-wrapper">
+                                 <div class="jury-image-inner">
+                                     <figure class="extra-responsive-image-wrapper jury-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                         <meta itemprop="url" content="wp-content/uploads/2019/06/MG-20190607-004-220x220.jpg">
+                                         <img src="img/monhun/iceborne/godjun.png">
+                                         <meta itemprop="width" content="220">
+                                         <meta itemprop="height" content="220">
+                                         <noscript data-alt="MG -20190607-004" data-src-size_2560="wp-content/uploads/2019/06/MG-20190607-004-220x220.jpg" data-src-size_1920="wp-content/uploads/2019/06/MG-20190607-004-220x220.jpg" data-src-size_1600="wp-content/uploads/2019/06/MG-20190607-004-220x220.jpg" data-src-size_1200="wp-content/uploads/2019/06/MG-20190607-004-220x220.jpg" data-src-size_960="wp-content/uploads/2019/06/MG-20190607-004-220x220.jpg" data-src-size_500="wp-content/uploads/2019/06/MG-20190607-004-220x220.jpg"><img alt="MG -20190607-004" src="wp-content/uploads/2019/06/MG-20190607-004-220x220.jpg" width="220" height="220"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="#" alt="" width="220" height="220" style="height: 220px;" /></figure><span class="jury-background"></span></div>
+                             </div>
+                         </div>
+                         <div class="jury-item">
+                             <div class="jury-metas">
+                                 <h3 class="jury-title">Young</h3>
+                                 <p class="jury-description">Monrin</p> <span class="separator"></span></div>
+                             <div class="jury-image-wrapper">
+                                 <div class="jury-image-inner">
+                                     <figure class="extra-responsive-image-wrapper jury-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                         <meta itemprop="url" content="wp-content/uploads/2019/06/Charlotte_Rampling_2016-2-220x220.jpg">
+                                         <meta itemprop="width" content="220">
+                                         <meta itemprop="height" content="220">
+                                         <noscript data-alt="Charlotte_Rampling_2016 2" data-src-size_2560="wp-content/uploads/2019/06/Charlotte_Rampling_2016-2-220x220.jpg" data-src-size_1920="wp-content/uploads/2019/06/Charlotte_Rampling_2016-2-220x220.jpg" data-src-size_1600="wp-content/uploads/2019/06/Charlotte_Rampling_2016-2-220x220.jpg" data-src-size_1200="wp-content/uploads/2019/06/Charlotte_Rampling_2016-2-220x220.jpg" data-src-size_960="wp-content/uploads/2019/06/Charlotte_Rampling_2016-2-220x220.jpg" data-src-size_500="wp-content/uploads/2019/06/Charlotte_Rampling_2016-2-220x220.jpg"><img alt="Charlotte_Rampling_2016 2" src="wp-content/uploads/2019/06/Charlotte_Rampling_2016-2-220x220.jpg" width="220" height="220"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="#" alt="" width="220" height="220" style="height: 220px;" /></figure><span class="jury-background"></span></div>
+                             </div>
+                         </div>
+                         <div class="jury-item">
+                             <div class="jury-metas">
+                                 <h3 class="jury-title">Gaesin</h3>
+                                 <p class="jury-description">Restart now</p> <span class="separator"></span></div>
+                             <div class="jury-image-wrapper">
+                                 <div class="jury-image-inner">
+                                     <figure class="extra-responsive-image-wrapper jury-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                         <meta itemprop="url" content="wp-content/uploads/2018/06/Renaud-Grand-Clement-220x220.png">
+                                         <meta itemprop="width" content="220">
+                                         <meta itemprop="height" content="220">
+                                         <noscript data-alt="Renaud Grand-Clément" data-src-size_2560="wp-content/uploads/2018/06/Renaud-Grand-Clement-220x220.png" data-src-size_1920="wp-content/uploads/2018/06/Renaud-Grand-Clement-220x220.png" data-src-size_1600="wp-content/uploads/2018/06/Renaud-Grand-Clement-220x220.png" data-src-size_1200="wp-content/uploads/2018/06/Renaud-Grand-Clement-220x220.png" data-src-size_960="wp-content/uploads/2018/06/Renaud-Grand-Clement-220x220.png" data-src-size_500="wp-content/uploads/2018/06/Renaud-Grand-Clement-220x220.png"><img alt="Renaud Grand-Clément" src="wp-content/uploads/2018/06/Renaud-Grand-Clement-220x220.png" width="220" height="220"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="#" alt="" width="220" height="220" style="height: 220px;" /></figure><span class="jury-background"></span></div>
+                             </div>
+                         </div>
+                         <div class="jury-item">
+                             <div class="jury-metas">
+                                 <h3 class="jury-title">Blue Moon</h3>
+                                 <p class="jury-description">Game addiction</p> <span class="separator"></span></div>
+                             <div class="jury-image-wrapper">
+                                 <div class="jury-image-inner">
+                                     <figure class="extra-responsive-image-wrapper jury-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                         <meta itemprop="url" content="wp-content/uploads/2018/06/christopher-miles-f2-220x220.png">
+                                         <meta itemprop="width" content="220">
+                                         <meta itemprop="height" content="220">
+                                         <noscript data-alt="christopher miles f2" data-src-size_2560="wp-content/uploads/2018/06/christopher-miles-f2-220x220.png" data-src-size_1920="wp-content/uploads/2018/06/christopher-miles-f2-220x220.png" data-src-size_1600="wp-content/uploads/2018/06/christopher-miles-f2-220x220.png" data-src-size_1200="wp-content/uploads/2018/06/christopher-miles-f2-220x220.png" data-src-size_960="wp-content/uploads/2018/06/christopher-miles-f2-220x220.png" data-src-size_500="wp-content/uploads/2018/06/christopher-miles-f2-220x220.png"><img alt="christopher miles f2" src="wp-content/uploads/2018/06/christopher-miles-f2-220x220.png" width="220" height="220"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="#" alt="" width="220" height="220" style="height: 220px;" /></figure><span class="jury-background"></span></div>
+                             </div>
+                         </div>
+                         <div class="jury-item">
+                             <div class="jury-metas">
+                                 <h3 class="jury-title">Unknown</h3>
+                                 <p class="jury-description">Preparing</p> <span class="separator"></span></div>
+                             <div class="jury-image-wrapper">
+                                 <div class="jury-image-inner">
+                                     <figure class="extra-responsive-image-wrapper jury-image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                         <meta itemprop="url" content="wp-content/uploads/2017/04/vincent-perez-Libre-de-droits-2-220x220.png">
+                                         <meta itemprop="width" content="220">
+                                         <meta itemprop="height" content="220">
+                                         <noscript data-alt="vincent-perez-Libre de droits 2" data-src-size_2560="wp-content/uploads/2017/04/vincent-perez-Libre-de-droits-2-220x220.png" data-src-size_1920="wp-content/uploads/2017/04/vincent-perez-Libre-de-droits-2-220x220.png" data-src-size_1600="wp-content/uploads/2017/04/vincent-perez-Libre-de-droits-2-220x220.png" data-src-size_1200="wp-content/uploads/2017/04/vincent-perez-Libre-de-droits-2-220x220.png" data-src-size_960="wp-content/uploads/2017/04/vincent-perez-Libre-de-droits-2-220x220.png" data-src-size_500="wp-content/uploads/2017/04/vincent-perez-Libre-de-droits-2-220x220.png"><img alt="vincent-perez-Libre de droits 2" src="wp-content/uploads/2017/04/vincent-perez-Libre-de-droits-2-220x220.png" width="220" height="220"> </noscript> <img class="extra-responsive-image-placeholder-thumb" src="#" alt="" width="220" height="220" style="height: 220px;" /></figure><span class="jury-background"></span></div>
+                             </div>
+                         </div>
+                     </div><span class="background-title"><span class="line"><span class="letter">H</span><span class="letter">u</span></span><span class="line"><span class="letter">n</span><span class="letter">t</span><span class="letter">e</span><span class="letter">r</span></span><span class="line"><span class="letter">2</span><span class="letter">0</span></span><span class="line"><span class="letter">1</span><span class="letter">9</span></span>
+                     </span>
+                 </div>
+             </div>
+             <div class="news-list-wrapper full-size">
+                 <div class="section-title-wrapper" id="news">
+                     <h2 class="section-title" > News <span class="separator"></span></h2></div>
+                 <div class="news-list" >
+                     <section class="news-content">
+                         <a href="news/les-ateliers-jeune-public-ont-commence/index.html" class="news-link">
+                             <time datetime="2019-07-17" class="news-date">case_1. PHP</time>
+                             <h3 class="news-title">게시판 작성</h3> </a>
+                     </section>
+                     <section class="news-content">
+                         <a href="news/les-laureats-du-vr-arles-festival-2019/index.html" class="news-link">
+                             <time datetime="2019-07-08" class="news-date">case_2. 앱 App 신규제작</time>
+                             <h3 class="news-title">앱 개발 및 연동</h3> </a>
+                     </section>
+                 </div>
+             </div>
+         </div>
+         </main>
+     </div>
 </body>
 </html>

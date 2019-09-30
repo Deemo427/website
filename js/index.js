@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function ($container) {
     //login event
     document.getElementById('login').addEventListener('click', function(){document.querySelector('.login').style.display='block';});
     document.querySelector('.close').addEventListener('click', function(){document.querySelector('.login').style.display='none';});
@@ -32,44 +32,6 @@ $(document).ready(function () {
             }, 500, 'easeInBack');
         }
     });
-//    section-title-wrapper
-    function initSectionTitle($container) {
-    var $sections = $container.find('.section-title-wrapper');
-    $sections.each(function () {
-        var $section = $(this)
-            , $inner = $section.children()
-            , $separator = $section.find('.separator')
-            , tween, height = $inner.height()
-            , scrollAnimator;
-        tween = new TimelineMax({
-            onUpdate: function () {}
-        });
-        tween.set($separator, {
-            width: height * 2
-            , right: '100%'
-            , immediateRender: !0
-        }).set($inner, {
-            color: 'transparent'
-            , immediateRender: !0
-        }).to($separator, 1, {
-            width: 30
-            , right: 0
-        }).set($inner, {
-            color: 'black'
-        }, '-=0.6');
-        scrollAnimator = new ExtraScrollAnimator({
-            target: $section
-            , tween: tween
-            , defaultProgress: 0
-            , speed: 0
-            , min: 0.2
-            , max: 0.4
-        });
-        $section.on("extra:scrollanimator:update", function (event) {
-            event.stopPropagation()
-        })
-    })
-}
 
     //submenu
     var $depth1 = $('#gnb>li');
@@ -134,13 +96,16 @@ $(document).ready(function () {
             "right": 0 + (posX / 20)
             , "bottom": -180 + (posY / 20)
         });
-    });
+    });    
     
+    
+Barba.Pjax.start();
 });
 
 //Counttime
 window.onload = function () {
     countDownToTime("Sep 6, 2020 15:00:00", 'countdown1'); // ****** Change this line!
+    console.log('frontPageInitEvents_onload');
 }
 
 function countDownToTime(countTo, id) {
@@ -163,42 +128,4 @@ function countDownToTime(countTo, id) {
     countDownToTime.interval = setTimeout(function () {
         countDownToTime(countTo, id);
     }, 1000);
-}
-
-function initSectionTitle($container) {
-    var $sections = $container.find('.section-title-wrapper');
-    $sections.each(function () {
-        var $section = $(this)
-            , $inner = $section.children()
-            , $separator = $section.find('.separator')
-            , tween, height = $inner.height()
-            , scrollAnimator;
-        tween = new TimelineMax({
-            onUpdate: function () {}
-        });
-        tween.set($separator, {
-            width: height * 2
-            , right: '100%'
-            , immediateRender: !0
-        }).set($inner, {
-            color: 'transparent'
-            , immediateRender: !0
-        }).to($separator, 1, {
-            width: 30
-            , right: 0
-        }).set($inner, {
-            color: 'black'
-        }, '-=0.6');
-        scrollAnimator = new ExtraScrollAnimator({
-            target: $section
-            , tween: tween
-            , defaultProgress: 0
-            , speed: 0
-            , min: 0.2
-            , max: 0.4
-        });
-        $section.on("extra:scrollanimator:update", function (event) {
-            event.stopPropagation()
-        })
-    })
 }

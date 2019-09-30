@@ -26,7 +26,7 @@ body:before { background-image: url("../img/monhun/bg_pattern.jpg"); background-
 /* img hover 시 추가 img link>?
 /*.element img{position: absolute; width: 100%; height: 100%;z-index: -1; }*/
 
-.logo{opacity: 0; font-family: 'PT Sans Narrow', sans-serif; width: 100%; color: white; font: bold 24pt/100px 'arial';text-align: center; 	text-transform: uppercase;	animation: fadeIn 0.5s linear forwards;	animation-delay: 5s;}
+.logo{opacity: 0; font-family: 'PT Sans Narrow', sans-serif; width: 100%; color: white; font: bold 18pt/75px 'arial';text-align: center; 	text-transform: uppercase;	animation: fadeIn 0.5s linear forwards;	animation-delay: 5s;}
 
 @keyframes rotate
 {	0%	{		transform: rotate(45deg);	}	100%	{	transform: otate(405deg);	}}
@@ -193,12 +193,11 @@ background-repeat: repeat; transition: opacity 0.2s cubic-bezier(0.25, 0.25, 0.7
 
 /*Main*/
 #wrapper {background-size: 100% 100vh; padding-left: 200px; position: relative}
-
 #wrapper:before {content: ""; display: block; opacity: .1; position: absolute; top: 0; left: 0; z-index: 0; width: 100%; height: 100vh;}
 
-#template-front-page .selection-wrapper {overflow: hidden;    padding-bottom: 120px;    position: relative;    z-index: 1}
+#template-front-page .selection-wrapper {overflow: hidden; padding-bottom: 180px; position: relative; z-index: 1}
 /*slide 구성필요*/
-#template-front-page .selection-wrapper .section-title-wrapper {    left: 60px}
+#template-front-page .selection-wrapper .section-title-wrapper {left: 60px}
 #template-front-page .selection-wrapper .selection-slider {    margin-right: 100px;    margin-left: 100px;    transform-origin: 0 0;    width: auto}
 #template-front-page .selection-wrapper .selection-slider .selection-slider-inner {    display: table;    white-space: nowrap;    overflow: visible}
 #template-front-page .selection-wrapper .selection-slider .selection-slider-inner .movie {    display: inline-block;    padding: 0 20px;    position: relative;    z-index: 1;    width: 360px}
@@ -266,8 +265,7 @@ background-repeat: repeat; transition: opacity 0.2s cubic-bezier(0.25, 0.25, 0.7
 #template-front-page .events-wrapper .event-link .event-date {display: none;    flex: 0 0 70px;    font-size: 14px;    font-weight: 400;    padding: 17px 15px 11px 0;    text-align: right}
 #template-front-page .events-wrapper .event-link .event-title {flex: 1 1 auto; font-size: 18px; font-weight: 700; padding: 17px 0 11px; position: relative; z-index: 1; transform: translateY(0);
     transition: transform 300ms ease-in-out;    text-overflow: ellipsis;    white-space: nowrap;    overflow: hidden}
-#template-front-page .events-wrapper .event-link .clone {    display: block;    font-size: 30px;    font-weight: 700;    padding: 17px 0 11px;    position: absolute;    top: 0;    left: 0;
-    transform: translateY(-100%);    text-overflow: ellipsis;    white-space: nowrap;    overflow: hidden;    width: 100%;    transition: transform 300ms ease-in-out}
+#template-front-page .events-wrapper .event-link .clone {    display: block;    font-size: 30px;    font-weight: 700;    padding: 17px 0 11px;    position: absolute;    top: 0;    left: 0; transform: translateY(-100%);    text-overflow: ellipsis;    white-space: nowrap;    overflow: hidden;    width: 100%;    transition: transform 300ms ease-in-out}
 #template-front-page .events-wrapper .event-link .separator {    background: #000;    position: absolute;    bottom: 0;    left: 0;    width: 100%;    height: 1px}
 #template-front-page .events-wrapper .event-link:after {    content: "";    margin: auto;    display: block;    position: absolute;    top: 0;    right: 0;    bottom: -1px;    left: 0;    z-index: 5;
     transform: translateY(100%);    transition: transform 450ms ease-in}

@@ -2,14 +2,14 @@ var FrontPage = ExtraView.extend({
     namespace: 'front-page'
     , extraOnEnter: function ($container) {
         var _this = this;
-//        initHeaderTitle($container);
-//        frontPageInitClouds($container);
-       frontPageInitSelection($container);
-       frontPageInitEvents($container);
-       initSectionTitle($container);
-       frontPageInitNews($container);
+        initHeaderTitle($container);
+        frontPageInitClouds($container);
+        frontPageInitSelection($container);
+        frontPageInitEvents($container);
+        initSectionTitle($container);
+        frontPageInitNews($container);
         this.imagesLoaded = !0;
-        // $window.trigger("extra:responsiveImage:init", [$container])
+        $window.trigger("extra:responsiveImage:init", [$container])
     }
     , getTimelineIn: function () {
         var deferred = Barba.Utils.deferred()
@@ -21,7 +21,6 @@ var FrontPage = ExtraView.extend({
         });
         timeline.add(function () {
             frontPageInitJury($container)
-            console.log('frontPageInitJury_first');
         });
         timeline.staggerFrom($container.find('.header .cloud'), 1.2, {
             yPercent: 20
@@ -56,13 +55,147 @@ var FrontPage = ExtraView.extend({
 });
 FrontPage.init();
 
+function frontPageInitClouds($container) {
+    var $window = $(window)
+        , scrollTop = 0
+        , $clouds = $container.find('.header .cloud')
+        , $wrapper = $container.find('.header-wrapper')
+        , wWidth = 0
+        , wHeight = 0
+        , material = new THREE.MeshPhongMaterial({
+            color: 0xffffff
+            , shading: THREE.FlatShading
+        })
+        , renderers = []
+        , clouds = []
+        , fov = 30
+        , isActive = !0;
+    $clouds.each(function (index, item) {
+        var $container = $(this)
+            , url = $container.data("url")
+            , renderer, scene, camera, cloud, loader = new THREE.OBJLoader()
+            , blur = $container.data("blur")
+            , y = $container.data("y")
+            , z = $container.data("z")
+            , rotate = parseFloat($container.data("rotate"))
+            , minX = $container.data("min-x")
+            , maxX = $container.data("max-x")
+            , randX = (Math.random() / 100) * ((30 + z) / 30)
+            , randY = (Math.random() / 100) * ((30 + z) / 30)
+            , randXMult = ((0.5 - Math.random()) / 100) * ((30 + z) / 30)
+            , randYMult = ((0.5 - Math.random()) / 100) * ((30 + z) / 30);
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(fov, wWidth / wHeight);
+        camera.position.z = 30;
+        renderer = new THREE.WebGLRenderer({
+            resolution: window.devicePixelRatio
+            , alpha: !0
+            , antialias: !0
+        });
+        renderer.setSize(wWidth, wHeight);
+        $container.append(renderer.domElement);
+        renderers.push({
+            renderer: renderer
+            , camera: camera
+        });
+        var light = new THREE.HemisphereLight(0xFFFFFF, 0x69a070, 1);
+        light.position.set(5, 5, 2);
+        scene.add(light);
+        var pointLight;
+        if (index === 0) {
+            pointLight = new THREE.PointLight(0x63b06d, 1.4, 6);
+            pointLight.position.set(3, -4, 10)
+        }
+        else if (index === 1) {
+            pointLight = new THREE.PointLight(0x63b06d, 1.4, 20);
+            pointLight.position.set(6, 10, 20)
+        }
+        else {
+            pointLight = new THREE.PointLight(0x63b06d, 0.5, 8);
+            pointLight.position.set(1, 6, -8)
+        }
+        pointLight.castShadow = !1;
+        scene.add(pointLight);
+
+        function init() {
+            scene.add(cloud);
+            cloud.material = material;
+            cloud.castShadow = !1;
+            cloud.receiveShadow = !1;
+            cloud.position.set(minX, y, z);
+            cloud.rotateY((rotate + 90) * THREE.Math.DEG2RAD);
+            cloud.rotateZ((5) * THREE.Math.DEG2RAD);
+            var scale = Math.min(1, 0.5 + wWidth / 2000);
+            cloud.scale.set(scale, scale, scale);
+            renderer.clear();
+            render()
+        }
+
+        function render() {
+            if (!isActive) {
+                return
+            }
+            randX += randXMult / 10;
+            randY += randYMult / 10;
+            cloud.position.setX((3 * Math.sin(randX)) + (((scrollTop / wHeight) * (maxX - minX)) + minX));
+            cloud.position.setY(y + Math.sin(randY));
+            renderer.render(scene, camera);
+            requestAnimationFrame(render)
+        }
+        loader.load(url, function (object) {
+            cloud = object;
+            clouds.push(cloud);
+            init()
+        })
+    });
+
+    function resizeHandler(event) {
+        wWidth = $wrapper.outerWidth();
+        wHeight = $wrapper.outerHeight();
+        renderers.forEach(function (renderer) {
+            renderer.renderer.setSize(wWidth, wHeight);
+            renderer.camera.aspect = wWidth / wHeight;
+            renderer.camera.updateProjectionMatrix()
+        });
+        var scale = Math.min(1, 0.5 + wWidth / 2000);
+        clouds.forEach(function (cloud) {
+            cloud.scale.set(scale, scale, scale)
+        });
+        scrollHandler()
+    }
+
+    function scrollHandler() {
+        scrollTop = $window.scrollTop()
+    }
+    $window.on("extra:resize", resizeHandler);
+    $window.on("scroll", scrollHandler);
+
+    function destroy() {
+        if (!isActive || app.currentContainer === $container[0]) {
+            return
+        }
+        isActive = !1;
+        clouds.forEach(function (cloud) {
+            cloud.parent.remove(cloud);
+            cloud = null
+        });
+        clouds = null;
+        renderers.forEach(function (renderer) {
+            renderer.renderer = null;
+            renderer.camera = null;
+            renderer = null
+        });
+        renderers = null;
+        $window.off("extra:resize", resizeHandler);
+        $window.off("scroll", scrollHandler)
+    }
+    Barba.Dispatcher.on("transitionCompleted", destroy)
+}
+
 function frontPageInitEvents($container) {
-    
-    console.log('frontPageInitEvents');
     var scrollAnimator, isActive = !0;
     $container.find('.events-wrapper .event-title').each(function () {
-        var $clone = $('<span class="clone"></span>').text($(this).text());  
-        // console.log($clone , ' clone ');
+        var $clone = $('<span class="clone"></span>').text($(this).text());
         $clone.insertAfter($(this))
     });
     if (!$container.find('.events-wrapper').length) {
@@ -130,7 +263,6 @@ function frontPageInitJury($container) {
         }))
     });
 
-    console.log('frontPageInitJury_onload');
     function destroy() {
         if (!isActive || app.currentContainer === $container[0]) {
             return
@@ -138,7 +270,6 @@ function frontPageInitJury($container) {
         isActive = !1;
         scrollAnimators.forEach(function (scrollAnimator) {
             scrollAnimator.destroy()
-            console.log('frontPageInitJury_fail');
         })
     }
     Barba.Dispatcher.on("transitionCompleted", destroy)
@@ -198,8 +329,7 @@ function frontPageInitSelection($container) {
     if (!$items.length) {
         return
     }
-    
-    // $items.parent().randomize();// randomize 기능 임시보류
+    $items.parent().randomize();
     slider = Draggable.create($sliderInner, {
         type: 'x'
         , dragClickables: !0
@@ -339,196 +469,4 @@ function frontPageInitSelection($container) {
         scrollAnimator.destroy()
     }
     Barba.Dispatcher.on("transitionCompleted", destroy)
-}
-
-function initSectionTitle($container) {
-    var $sections = $container.find('.section-title-wrapper');
-    $sections.each(function () {
-        var $section = $(this)
-            , $inner = $section.children()
-            , $separator = $section.find('.separator')
-            , tween, height = $inner.height()
-            , scrollAnimator;
-        tween = new TimelineMax({
-            onUpdate: function () {}
-        });
-        tween.set($separator, {
-            width: height * 2
-            , right: '100%'
-            , immediateRender: !0
-        }).set($inner, {
-            color: 'transparent'
-            , immediateRender: !0
-        }).to($separator, 1, {
-            width: 30
-            , right: 0
-        }).set($inner, {
-            color: 'black'
-        }, '-=0.6');
-        scrollAnimator = new ExtraScrollAnimator({
-            target: $section
-            , tween: tween
-            , defaultProgress: 0
-            , speed: 0
-            , min: 0.2
-            , max: 0.4
-        });
-        $section.on("extra:scrollanimator:update", function (event) {
-            event.stopPropagation()
-        })
-    })
-}
-
-$(document).ready(function () {
-    $('#sidebar').extraSticky({
-         'minSize': 690
-    })
-});
-
-// $(document).ready(function () {
-//     $('.button-top').on("click", function (event) {
-//         event.preventDefault();
-//         TweenMax.to(window, 3, {
-//             scrollTo: 0
-//             , autoKill: !1
-//             , ease: Quad.easeInOut
-//         })
-//     })
-// });
-// $(window).on('beforeunload', function () {
-//     $(window).scrollTop(0)
-// });
-
-function transitionIn($container) {
-    $('#barba-wrapper').find('.barba-container').not($container).remove();
-    var timeline = new TimelineMax();
-    timeline.set($("#transition-mask2,#transition-mask1"), {
-        clearProps: 'all'
-    });
-    timeline.set(window, {
-        scrollTo: 0
-    }, 0);
-    timeline.set($container, {
-        clearProps: 'visibility'
-    });
-    timeline.staggerFrom($container.find('.header .title .letter'), 0.6, {
-        cycle: {
-            yPercent: function (index) {
-                return ((index % 2) ? -110 : 110)
-            }
-        }
-    }, 0.05, '-=1', function () {
-        $container.find('.header .title').addClass('anim-letters-completed')
-    });
-    timeline.add(function () {
-        $(window).trigger('extra:sticky:resize');
-        $(window).trigger('extra:scrollanimator:resize')
-    });
-    return timeline
-}
-
-function transitionOut($container) {
-    var timeline = new TimelineMax()
-        , $sidebar = $("#sidebar")
-        , $mask1 = $("#transition-mask1")
-        , $mask2 = $("#transition-mask2")
-        , winWidth = window.innerWidth;
-    timeline.addLabel("start");
-    timeline.to($mask1, 1, {
-        right: 0
-        , ease: Power2.easeInOut
-    }, "start");
-    timeline.to($mask2, 1, {
-        right: 0
-        , ease: Power2.easeInOut
-    }, '-=0.5');
-    if (winWidth > 690) {
-        timeline.to($mask2, 0.5, {
-            left: 200
-            , ease: Power2.easeOut
-        }, '-=0.3')
-    }
-    timeline.to(window, 0.5, {
-        scrollTo: 0
-        , ease: Quad.easeOut
-    });
-    timeline.add(function () {
-        $(window).trigger("extra:transition:transitionout")
-    });
-    return timeline
-}
-$.fn.shuffle = function () {
-    var allElems = this.get()
-        , getRandom = function (max) {
-            return Math.floor(Math.random() * max)
-        }
-        , shuffled = $.map(allElems, function () {
-            var random = getRandom(allElems.length)
-                , randEl = $(allElems[random]).clone(!0)[0];
-            allElems.splice(random, 1);
-            return randEl
-        });
-    this.each(function (i) {
-        $(this).replaceWith($(shuffled[i]))
-    });
-    return $(shuffled)
-};
-$.fn.randomize = function (selector) {
-    var $elems = selector ? $(this).find(selector) : $(this).children();
-    for (var i = $elems.length; i >= 0; i--) {
-        $(this).append($elems[Math.random() * i | 0])
-    }
-    return this
-};
-
-function shuffleArray(array) {
-    var currentIndex = array.length
-        , temporaryValue, randomIndex;
-    while (0 !== currentIndex) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue
-    }
-    return array
-}
-
-function isIEorEDGE() {
-    return navigator.appName === 'Microsoft Internet Explorer' || (navigator.appName === "Netscape" && navigator.appVersion.indexOf('Edge') > -1) || (navigator.appName === "Netscape" && navigator.appVersion.indexOf('Trident') > -1)
-}
-
-function getScrollbarWidth() {
-    var scrollbarWidth = 0;
-    if (window.extraScrollbarWidthCache) {
-        scrollbarWidth = window.extraScrollbarWidthCache
-    }
-    else {
-        var outer = document.createElement("div");
-        outer.style.visibility = "hidden";
-        outer.style.width = "100px";
-        outer.style.msOverflowStyle = "scrollbar";
-        document.body.appendChild(outer);
-        var widthNoScroll = outer.offsetWidth;
-        outer.style.overflow = "scroll";
-        var inner = document.createElement("div");
-        inner.style.width = "100%";
-        outer.appendChild(inner);
-        var widthWithScroll = inner.offsetWidth;
-        outer.parentNode.removeChild(outer);
-        scrollbarWidth = window.extraScrollbarWidthCache = widthNoScroll - widthWithScroll
-    }
-    return scrollbarWidth
-}
-Math.clamp = function (value, min, max) {
-    if (value === undefined) {
-        return 0
-    }
-    if (min === undefined) {
-        min = 0
-    }
-    if (max === undefined) {
-        max = 1
-    }
-    return Math.max(min, Math.min(value, max))
 }
