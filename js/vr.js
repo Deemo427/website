@@ -98,7 +98,7 @@ function frontPageInitJury($container) {
         , isActive = !0;
     $items.not('.fixed').shuffle();
     $items = $wrapper.find('.jury-item');
-    $items.slice(3).remove();
+    $items.slice(4).remove();
     $items.each(function (index, item) {
         var tween = new TimelineMax()
             , $item = $(this)
@@ -199,7 +199,14 @@ function frontPageInitSelection($container) {
         return
     }
     
-    // $items.parent().randomize();// randomize 기능 임시보류
+    $.fn.randomize = function (selector) {
+        var $elems = selector ? $(this).find(selector) : $(this).children();
+        for (var i = $elems.length; i >= 0; i--) {
+            $(this).append($elems[Math.random() * i | 0])
+        }
+        return this
+    };  
+
     slider = Draggable.create($sliderInner, {
         type: 'x'
         , dragClickables: !0
@@ -532,3 +539,32 @@ Math.clamp = function (value, min, max) {
     }
     return Math.max(min, Math.min(value, max))
 }
+
+function blockScroll(event) {    event.preventDefault();    event.stopPropagation();    return !1}
+
+function extraBlockUI(element, event) {
+    app.isTransitioning = !0;
+    $('html').addClass('extra-transition-freeze').on("scroll touchmove mousewheel", blockScroll)
+}
+
+function extraReleaseUI(element, event) {
+    app.isTransitioning = !1;
+    $('html').removeClass('extra-transition-freeze').off("scroll touchmove mousewheel", blockScroll)
+}
+
+$.fn.shuffle = function () {
+    var allElems = this.get()
+        , getRandom = function (max) {
+            return Math.floor(Math.random() * max)
+        }
+        , shuffled = $.map(allElems, function () {
+            var random = getRandom(allElems.length)
+                , randEl = $(allElems[random]).clone(!0)[0];
+            allElems.splice(random, 1);
+            return randEl
+        });
+    this.each(function (i) {
+        $(this).replaceWith($(shuffled[i]))
+    });
+    return $(shuffled)
+};

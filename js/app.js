@@ -9,13 +9,13 @@ var app = {
     , previousContainer: null
     , lastClickedLink: null
     , init: function () {
-//        extraBlockUI();
+    //    extraBlockUI();
         this.initLinks();
         this.initBarba();
         extraPreloader.init()
     }
     , initLinks: function () {
-//        extraBlockUI();
+    //    extraBlockUI();
         Barba.Pjax.originalPreventCheck = Barba.Pjax.preventCheck;
         Barba.Pjax.preventCheck = function (event, element) {
             if (!element) {
